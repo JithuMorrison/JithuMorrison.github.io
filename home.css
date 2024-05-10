@@ -949,6 +949,61 @@ ul a:hover {
   color: white;
 }
 
+.Infoofme {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 75%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.jithucontainer {
+  background-color: pink;
+  border-radius: 0.5rem;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  height: 25rem;
+}
+
+.aboutbox {
+  display: flex;
+}
+
+.aboutbox img {
+  width: 40%;
+  height: 40%;
+  padding-right: 20px;
+  border-radius: 0.5rem;
+}
+
+.aboutbox p{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.aboutbox1 {
+  display: flex;
+}
+
+.aboutbox1 img {
+  width: 40%;
+  height: 40%;
+  padding-left: 20px;
+  padding-top: 20px;
+  border-radius: 0.5rem;
+}
+
+.aboutbox1 p{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+.jithucontainer h1 {
+  padding-bottom: 5px;
+  text-align: center;
+  padding-top: 10px;
+}
 
 
 
@@ -1003,6 +1058,9 @@ ul a:hover {
     margin: 2rem 2.5rem;
     display: block;
   }
+  .aboutbox p{
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1012,5 +1070,9 @@ ul a:hover {
 
   .heading {
     font-size: 2.5rem;
+  }
+
+  .aboutbox p {
+    font-size: 0.9rem;
   }
 }
