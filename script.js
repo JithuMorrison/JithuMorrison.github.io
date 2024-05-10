@@ -43,46 +43,6 @@ var swiper = new Swiper(".products-slider",
     1020: {slidesPerView:3,},
     },});
 
-  let list = document.querySelector('.list');
-  let listCard = document.querySelector('.listCard');
-  let body = document.querySelector('.body');
-  let total = document.querySelector('.total');
-  let quantity = document.querySelector('.quantity');
-
-  let products =[
-    {
-      id: 1,
-      name: "pro",
-      image: "carrot.jpg",
-      price: 554
-    },
-    {
-      id: 2,
-      name: "pror",
-      image: "carrot.jpg",
-      price: 557
-    },
-    {
-      id: 3,
-      name: "prod",
-      image: "banana.jpg",
-      price: 555
-    }
-  ];
-  let listCards =[];
-  function initApp(){
-    products.forEach((value,key)=> {
-      let newDiv = document.createElement('div');
-      newDiv.classList.add('item');
-      newDiv.innerHTML = `
-        <img src="image/${value.image}"/>
-        <div class="title">${value.name}</div>
-        <div class="price">${value.price.toLocalString()}</div>
-        <button onclick="addToCart(${hey})">Add To Cart</button>
-      `;
-      list.appendChild(newDiv);
-    })
-  }
 });
 // Wrap your jQuery code within the document ready function
 $(document).ready(function() {
@@ -146,11 +106,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var headerSection = document.getElementById("home");
     var imageIndex = 0;
     var imageArray = [
-        "https://i0.wp.com/discvr.blog/wp-content/uploads/2020/12/The-beautiful-yet-feisty-Lilac-breasted-roller-bird-Africas-most-colorful-bird-2.png?resize=1024%2C576&ssl=1",
-        "https://th.bing.com/th/id/R.41af45341d79e417a60c0946bf72bd2b?rik=0BB91tiFZZDrRQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fWild-Animals-Wallpaper-HD.jpg&ehk=GZDBtXQNLQbz%2bjPrjBmWmBLeKldT0y7Epk%2b9%2fE6Mk3A%3d&risl=&pid=ImgRaw&r=0",
-        "https://th.bing.com/th/id/R.5a946614032f6485a32505b74c64a4b6?rik=bIOS5e21CAPBPg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fCool-Wild-Animal-Wallpaper-For-Desktop.jpg&ehk=ZHKBgyel59lcZJkvApLpZbuOBEoOaluNQdWYEgBGlt8%3d&risl=&pid=ImgRaw&r=0",
-      "https://wallup.net/wp-content/uploads/2016/01/275471-animals-moose.jpg","https://wallpapercave.com/wp/wp2049736.jpg"
-        // Add more image URLs as needed
+        "https://tech-prospect.com/wp-content/uploads/2020/02/Tips-for-Successful-Mobile-App-Development-and-Deployment-scaled.jpg",
+        "https://www.pixaura.com/wp-content/uploads/2021/01/web-hero.png",
+        "https://theplaynet.com/wp-content/uploads/2023/07/Article-231.png", "https://media.licdn.com/dms/image/D4D12AQEdyYGxg6y0Qw/article-cover_image-shrink_720_1280/0/1655959968583?e=2147483647&v=beta&t=SVVMt4V4nJ7zPnmOhugwnzexGT1DLzKmTuwiZAPAXbs","https://beinsure.com/wp-content/uploads/2022/08/Cyber-Insurance.jpg","https://wallpapercave.com/wp/wp2049736.jpg"
     ];
 
     function changeImage() {
