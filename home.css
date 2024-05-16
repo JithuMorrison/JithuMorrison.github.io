@@ -963,7 +963,7 @@ ul a:hover {
   width: 95%;
   margin: 0 auto;
   margin-top: 1rem;
-  height: 25rem;
+  height: 26rem;
 }
 
 .aboutbox {
@@ -980,6 +980,8 @@ ul a:hover {
 .aboutbox p{
   padding-left: 20px;
   padding-right: 20px;
+  text-align: justify;
+  padding-bottom: 10px;
 }
 
 .aboutbox1 {
@@ -998,11 +1000,16 @@ ul a:hover {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
+  text-align: justify;
+  padding-bottom: 10px;
 }
 .jithucontainer h1 {
   padding-bottom: 5px;
   text-align: center;
   padding-top: 10px;
+}
+.jithucontainer {
+  overflow: auto;
 }
 
 
@@ -1058,8 +1065,29 @@ ul a:hover {
     margin: 2rem 2.5rem;
     display: block;
   }
+  .Infoofme{
+    width:95%;
+  }
+  .aboutbox img {
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+
   .aboutbox p{
-    font-size: 0.7rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+
+  .aboutbox1 img {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .aboutbox1 p{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
   }
 }
 
