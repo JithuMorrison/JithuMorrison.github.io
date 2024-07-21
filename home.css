@@ -1079,6 +1079,17 @@ ul a:hover {
   margin-bottom: 10px;
 }
 
+.aboutbox3 {
+  display: flex;
+  text-align: center;
+}
+
+.aboutbox3 p {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  text-align: justify;
+}
 
 
 
