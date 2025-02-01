@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Varela Round', sans-serif;
   text-decoration: none;
 }
 
@@ -744,7 +744,7 @@ ul a:hover {
 }
 
 .header .logo {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--text-color);
   cursor: default;
@@ -756,7 +756,7 @@ ul a:hover {
 }
 
 .header .navbar a {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: var(--text-color);
   margin-left: 4rem;
   transition: 0.3s;
