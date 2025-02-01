@@ -96,8 +96,21 @@ span {
 
 .homeimg img {
   width: 35vw;
+  animation: floatImage 4s ease-in-out infinite;
 }
 
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+ 
 .socialmedia a {
   display: inline-flex;
   justify-content: center;
@@ -201,13 +214,17 @@ span {
 }
 .Header-visuals {
   position: relative;
-  margin-top: 5rem;
-  transform: rotate(-10deg);
+  margin: 0;
+  transform: translateY(-5rem) rotate(-10deg);
 }
-@media (min-width: 58rem) {
+@media (max-width: 768px) {
   .Header-visuals {
-    margin: 0;
-    transform: translateY(-5rem) rotate(-10deg);
+    margin-top: 70px;
+    margin-left: -170px;
+  }
+  .Header {
+    margin-top: 20px;
+    height: 80vh;
   }
 }
 .Button {
@@ -1338,7 +1355,7 @@ ul a:hover {
     width: 30rem;
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
-    background: #fff;
+    background: var(--second-bg-color);
   }
 
   .header .navbar a {
@@ -1371,6 +1388,14 @@ ul a:hover {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+  }
+
+  .home{
+    top: -360px;
+    left: 185px;
+    width: 180px;
+    height: 120px;
+    border-radius: 10px;
   }
 }
 

@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     searchForm.classList.toggle('active');
   }
 
+let navbar = document.querySelector('.navbar');
+document.querySelector('#menu-btn').onclick = () => {
+navbar.classList.toggle('active');
+searchForm.classList.remove('active');
+}
+
 var swiper = new Swiper(".products-slider",
       {
         loop:true, spaceBetween:20,
@@ -98,4 +104,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Change the image every 5 seconds (adjust as needed)
     setInterval(changeImage, 5000);
+});
+
+const typed  = new Typed('.multiple-text',{
+    strings: ['Frontend Developer','App Developer','Game Developer','Youtuber'],
+    typespeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
 });
