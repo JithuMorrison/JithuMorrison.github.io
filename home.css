@@ -9,6 +9,7 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+  --bgcolor: #1f242d;
 }
 
 *:before,
@@ -38,7 +39,6 @@ body {
 }
 
 header {
-  border: 2px solid;
   position: fixed;
   top: 0;
   left: 0;
@@ -48,15 +48,99 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url('https://i.pinimg.com/originals/e2/b1/7b/e2b17b69119c0ab5dac2a655d319b88d.jpg');
+  background: var(--bgcolor);
   box-shadow: var(--box-shadow);
   z-index: 99;
+}
+
+.homo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgcolor);
+  color: var(--text-color);
+  height: 900px;
+  margin-top: -460px;
+}
+
+.homecontent {
+  margin-top: 300px;
+  margin-left: -50px;
+  margin-right: 100px;
+}
+
+.homecontent h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.homecontent h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.homecontent h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.homecontent p {
+  font-size: 1.6rem;
+  margin-bottom: -20px;
+  margin-top: -20px;
+}
+
+.homeimg img {
+  width: 35vw;
+}
+
+.socialmedia a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+}
+
+.socialmedia a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.botn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+}
+
+.botn:hover {
+  box-shadow: none;
+  
 }
 
 .Header {
   position: relative;
   height: 90vh;
   display: block;
+  z-index: 1;
 }
 .Header-background {
   position: absolute;
@@ -173,6 +257,11 @@ header {
   border: 1px solid #f1f1f1;
   border-radius: 2rem;
   box-shadow: inset -0.05rem 0.05rem 0.5rem 0rem rgba(50,0,100,0.05);
+}
+
+.display {
+  background: var(--bgcolor);
+  color: var(--text-color);
 }
 
 #headerImage {
@@ -485,7 +574,6 @@ ul a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  user-drag: none;
   box-shadow: 0 0 0 -.25rem rgba(0, 0, 0, .1);
 }
 
@@ -630,8 +718,9 @@ ul a:hover {
 
 .header .logo {
   font-size: 2.5rem;
-  font-weight: bolder;
-  color: white;
+  font-weight: 600;
+  color: var(--text-color);
+  cursor: default;
 }
 
 .header .logo i {
@@ -640,13 +729,14 @@ ul a:hover {
 }
 
 .header .navbar a {
-  font-size: 1.3rem;
-  margin: 0 1rem;
-  color: black;
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: 0.3s;
 }
 
 .header .navbar a:hover {
-  color: green;
+  color: var(--main-color);
 }
 
 .header .icons div {
@@ -851,6 +941,7 @@ ul a:hover {
   background-position: center;
   background-size: cover;
   transition: opacity 1s ease;
+  z-index: 2;
 }
 
 .products .products-slider {
