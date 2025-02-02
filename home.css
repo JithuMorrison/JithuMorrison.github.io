@@ -1440,6 +1440,15 @@ ul a:hover {
   margin-bottom: 70px;
 }
 
+.goat {
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  right: -1170px;
+  z-index: 3;
+  transform: scaleX(-1);
+}
+
 
 
 
@@ -1575,6 +1584,13 @@ ul a:hover {
 
   .services-container {
     margin-top: -45px;
+  }
+
+  .goat {
+    height: 117px;
+    width: 150px;
+    top: 140px;
+    right: -5px;
   }
 
 }
