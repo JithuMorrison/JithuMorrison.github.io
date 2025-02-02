@@ -1515,6 +1515,10 @@ ul a:hover {
   section {
     padding: 2rem;
   }
+
+  .portfolio {
+    padding-bottom: 7rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1626,6 +1630,14 @@ ul a:hover {
     margin-top: -45px;
   }
 
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+
   .goat {
     height: 117px;
     width: 150px;
@@ -1633,6 +1645,12 @@ ul a:hover {
     right: -5px;
   }
 
+}
+
+@media (max-width: 617px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 450px) {
