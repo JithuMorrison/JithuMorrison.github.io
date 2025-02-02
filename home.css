@@ -1572,8 +1572,8 @@ ul a:hover {
     padding-top: 10px;
   }
 
-  .home{
-    top: -360px;
+  .home {
+    top: -400px;
     left: 185px;
     width: 180px;
     height: 120px;
@@ -1666,29 +1666,11 @@ ul a:hover {
     font-size: 0.9rem;
   }
 
-  .home{
-    top: -360px;
+  .home {
+    top: -400px;
     left: 175px;
     width: 170px;
     height: 110px;
     border-radius: 10px;
-  }
-}
-
-@media (min-height: 723px) and (max-width: 768px) {
-  .home {
-    top: -330px;
-  }
-  .Header {
-    height: 65vh;
-  }
-}
-
-@media (min-height: 874px) and (max-width: 768px) {
-  .home {
-    top: -360px;
-  }
-  .Header {
-    height: 60vh;
   }
 }
