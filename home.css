@@ -1616,3 +1616,12 @@ ul a:hover {
     border-radius: 10px;
   }
 }
+
+@media (min-height: 723px) {
+  .home {
+    top: -330px;
+  }
+  .Header {
+    height: 65vh;
+  }
+}
