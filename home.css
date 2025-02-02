@@ -225,7 +225,7 @@ span {
   }
   .Header {
     margin-top: 20px;
-    height: 70vh;
+    height: 80vh;
   }
 }
 .Button {
@@ -1529,7 +1529,7 @@ ul a:hover {
   }
 
   .home{
-    top: -400px;
+    top: -360px;
     left: 185px;
     width: 180px;
     height: 120px;
@@ -1617,20 +1617,20 @@ ul a:hover {
   }
 }
 
-@media (min-height: 874px) and (max-width: 450px) {
+@media (min-height: 723px) and (max-width: 768px) {
   .home {
-    top: -390px;
+    top: -330px;
   }
   .Header {
     height: 65vh;
   }
 }
 
-@media (min-height: 723px) and (max-width: 450px) {
+@media (min-height: 874px) and (max-width: 768px) {
   .home {
-    top: -330px;
+    top: -360px;
   }
   .Header {
-    height: 65vh;
+    height: 60vh;
   }
 }
