@@ -59,7 +59,7 @@ header {
   align-items: center;
   background-color: var(--bgcolor);
   color: var(--text-color);
-  height: 900px;
+  height: 940px;
   margin-top: -460px;
 }
 
@@ -1435,6 +1435,11 @@ ul a:hover {
   text-align: justify;
 }
 
+.animals {
+  display: flex;
+  margin-bottom: 70px;
+}
+
 
 
 
@@ -1525,6 +1530,7 @@ ul a:hover {
   .homo {
     flex-direction: column;
     margin-top: -330px;
+    margin-left: -10px;
   }
 
   .homecontent {
@@ -1556,8 +1562,21 @@ ul a:hover {
 
   .anione {
     height: 70px;
-    margin-left: 15px;
+    margin-left: 5px;
   }
+
+  .animals {
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    margin-top: -30px;
+  }
+
+  .services-container {
+    margin-top: -45px;
+  }
+
 }
 
 @media (max-width: 450px) {
@@ -1571,5 +1590,13 @@ ul a:hover {
 
   .aboutbox p {
     font-size: 0.9rem;
+  }
+
+  .home{
+    top: -360px;
+    left: 175px;
+    width: 170px;
+    height: 110px;
+    border-radius: 10px;
   }
 }
