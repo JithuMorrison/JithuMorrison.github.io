@@ -390,6 +390,8 @@ input[type=checkbox] {
   left: 15px;
   height: 22px;
   width: 22px;
+  margin-top: 25px;
+  margin-left:20px;
 }
 
 .spinner {
@@ -757,10 +759,15 @@ ul a:hover {
   padding: 0 1rem;
 }
 
+.header .navbar {
+  margin-left: 200px;
+  margin-top: 15px;
+}
+
 .header .navbar a {
   font-size: 1.3rem;
   color: var(--text-color);
-  margin-left: 4rem;
+  margin-left: 2rem;
   transition: 0.3s;
 }
 
@@ -1636,6 +1643,12 @@ ul a:hover {
 
   .portfolio-container {
     grid-template-columns: repeat(2,1fr);
+    margin-top: -25px;
+    margin-bottom: -60px;
+  }
+
+  .logo {
+    margin-left: 30px;
   }
 
   .goat {
@@ -1643,6 +1656,11 @@ ul a:hover {
     width: 150px;
     top: 140px;
     right: -5px;
+  }
+
+  .sidebarIconToggle {
+    margin-top: 4px;
+    margin-left: 0px;
   }
 
 }
