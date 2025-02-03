@@ -1528,7 +1528,7 @@ ul a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* 358 743 */
   #menu-btn {
     display: inline-block;
   }
@@ -1694,5 +1694,22 @@ ul a:hover {
 
   .Header {
     height: 70vh;
+  }
+}
+
+@media (max-width: 450px) and (min-height: 885px) {  /* 420 886 */
+  .Header {
+    height: 60vh;
+  }
+  .home {
+    top: -350px;
+    left: 220px;
+  }
+  .anione {
+    height: 80px;
+    margin-left: 8px;
+  }
+  .ani {
+    height: 80px;
   }
 }
