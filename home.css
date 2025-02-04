@@ -1060,9 +1060,15 @@ ul a:hover {
 
 .blogs-box p {
   font-size: 1.2rem;
-  margin: 1rem 0 3rem;
+  margin: 1rem 0 1rem;
   text-align: left;
   width: 1200px;
+}
+
+.blogs-box .p {
+  font-size: 1.2rem;
+  margin: 1rem 0 3rem;
+  text-align: left;
 }
 
 .portfolio-container {
@@ -1667,7 +1673,7 @@ ul a:hover {
 
   .blogs-container .blogs-box {
     padding-top: 20px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
   }
 
   .blogs-box p {
