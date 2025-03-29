@@ -1162,6 +1162,23 @@ ul a:hover {
   transform: translateY(0%);
 }
 
+.portfolio-box:hover .portfolio-text{
+  color: transparent;
+  transition: .5s ease;
+  font-size: 1rem;
+}
+
+.portfolio-text {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  transition: .5s ease;
+  font-size: 2rem;
+}
+
 .portfolio-layer h4 {
   font-size: 2.5rem;
 }
