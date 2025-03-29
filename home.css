@@ -240,6 +240,10 @@ span {
   cursor: pointer;
   box-shadow: 0 1.75rem 2rem -0.4rem rgba(50,0,100,0.15);
 }
+
+.Button a {
+  color: var(--color-3);
+}
 .Button:hover {
   color: var(--color-4);
   box-shadow: 0 1.75rem 3rem 0rem rgba(50,0,100,0.1);
