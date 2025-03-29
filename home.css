@@ -1075,6 +1075,48 @@ ul a:hover {
   text-align: left;
 }
 
+.hobby-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: var(--text-color);
+  margin-top: -80px;
+}
+
+.hobby-container .hobby-box {
+  width: calc((100% - 4rem) / 3.2); /* 3 per row with 2rem gap between */
+  background: var(--second-bg-color);
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bgcolor);
+  transition: .5s ease;
+  padding: 60px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.hobby-container .hobby-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.hobby-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.hobby-box h3 {
+  font-size: 2rem;
+}
+
+.hobby-box p {
+  font-size: 1.2rem;
+  margin: 1rem 0 1rem;
+  text-align: left;
+}
+
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
