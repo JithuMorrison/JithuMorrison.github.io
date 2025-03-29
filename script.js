@@ -25,6 +25,23 @@ var swiper = new Swiper(".products-slider",
     },});
 
 });
+
+const placeholders = [
+    "🔍 Pretend this works... go ahead, try me!",
+    "Type anything... I dare you 😏",
+    "Looking for something? You won’t find it",
+    "This search bar is just vibing 😌",
+    "Shhh... I’m undercover. Not really working 👀",
+    "Feeling lucky? This won't help. 😅",
+    "Search me... or don’t. I won’t judge.",
+    "Looking for something? So am I.",
+    "Spoiler: This doesn’t search anything 🤫",
+    "A search box with trust issues."
+  ];
+
+const randomPlaceholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+document.getElementById("search-box").placeholder = randomPlaceholder;
+
 // Wrap your jQuery code within the document ready function
 $(document).ready(function() {
 
