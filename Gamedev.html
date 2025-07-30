@@ -1,134 +1,448 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Jithu's web</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+      body {
+        min-height: 100vh;
+        background: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Photos-Universe.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Jithu's web</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="home.css" rel="stylesheet" type="text/css" />
-  <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet"/>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <style>
-    body {
-      min-height: 100vh;
-      background: url('https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Photos-Universe.jpg') no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
-</head>
+      .projects {
+        padding: 2rem 2rem 8rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-<body>
-  <header class="header">
-    <a href="#" class="logo"> <i class="fa fa-shield"></i>Game Dev</a>
-    <nav class="navbar">
-      <a href="index.html"> Home </a>
-      <a href="#Infoaboutme"> About me </a>
-      <a href="#footer"> Contact us!! </a>
-    </nav>
-    <div class="icons">
-      <div class="fa fa-bars" id="menu-btn"></div>
-      <div class="fa fa-search" id="search-btn"></div>
-      <a href="login.html">
-      <div class="fa fa-user" id="login-btn"></div>
-      </a>
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 3rem;
+        margin-top: 2rem;
+      }
+
+      .project-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .project-card:hover::before {
+        left: 100%;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2);
+        border-color: #00ffff;
+      }
+
+      .project-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .project-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .project-card h3 {
+        font-family: "Orbitron", monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #00ffff;
+      }
+
+      .project-card p {
+        color: #a0a0a0;
+        line-height: 1.8;
+        margin: 1.5rem 0;
+      }
+
+      .project-images {
+        display: flex;
+        gap: 1rem;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+      }
+
+      .project-image {
+        width: 100px;
+        height: 80px;
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .project-image:hover {
+        transform: scale(1.1);
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #00ffff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+      }
+
+      .project-link:hover {
+        text-shadow: 0 0 10px #00ffff;
+        transform: translateX(5px);
+      }
+
+      .jithucolor {
+        background: linear-gradient(45deg, #00ffff, #ff0080, #7c3aed, #00ff00);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-shift 3s ease-in-out infinite;
+      }
+
+      @keyframes gradient-shift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .project-card {
+          padding: 1.5rem;
+        }
+
+        .heading {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> <i class="fa fa-shield"></i>Game Dev</a>
+      <nav class="navbar">
+        <a href="index.html"> Home </a>
+        <a href="#Infoaboutme"> About me </a>
+        <a href="#footer"> Contact us!! </a>
+      </nav>
+      <div class="icons">
+        <div class="fa fa-bars" id="menu-btn"></div>
+        <div class="fa fa-search" id="search-btn"></div>
+        <a href="login.html">
+          <div class="fa fa-user" id="login-btn"></div>
+        </a>
+      </div>
+      <form class="search-form">
+        <input type="search" id="search-box" placeholder="Search here..." />
+        <label for="search-box" class="fa fa-search"></label>
+      </form>
+    </header>
+    <div class="header"></div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <li class="jithucolor">Jithu Morrison <span>Web Developer</span></li>
+        <li><a href="#" target="_blank">Web dev</a></li>
+        <li><a href="#" target="_blank">App dev</a></li>
+        <li><a href="#" target="_blank">Game developer</a></li>
+        <li><a href="#" target="_blank">YouTuber</a></li>
+        <li><a href="#" target="_blank">Student</a></li>
+      </ul>
     </div>
-    <form class="search-form">
-      <input type="search" id="search-box" placeholder="Search here...">
-      <label for="search-box" class="fa fa-search"></label>
-    </form>   
-  </header>
-  <div class="header"></div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-      <li>Jithu <span>Web Developer</span></li>
-      <li><a href="#" target="_blank">Web dev</a></li>
-      <li><a href="#" target="_blank">App dev</a></li>
-      <li><a href="#" target="_blank">Game developer</a></li>
-      <li><a href="#" target="_blank">YouTuber</a></li>
-      <li><a href="#" target="_blank">Student</a></li>
-    </ul>
-  </div>
-  <section></section>
-  <section class="Infoaboutme" id="Infoaboutme">
-    <h1 class="heading">VR<span>Projects</span></h1>
-  <section class="Infoofme">
-    <div class="jithucontainer1">
-      <h1>IoT -Based Virtual Reality Comforting Movement Design For Healing Rehabilitation 
-</h1>
-      <div class="aboutbox">
-        <p>This project affords a pioneering technique to muscle healing that mixes virtual reality and rehabilitation therapy. Traditional rehabilitation techniques frequently lack engagement and real-time comments, leading to suboptimal effects. Our machine makes use of a custom developed virtual reality game designed for muscle healing, in which users engage using body movements captured by IoT sensors. These sensors gather information on muscle pastime and range of movement, allowing the machine to provide personalized feedback and adapt the sport mechanics as a result.<br><br> Through gamification strategies including rewards and challenges, customers are motivated to actively participate in their rehabilitation manner. Additionally, the system includes functions for far flung monitoring, allowing healthcare professionals to music affected person progress and adjust protocols as wished. Through user testing, we demonstrate the feasibility and effectiveness of our method, which could revolutionize muscle rehabilitation by making it more engaging, powerful, and handy.
-</p>
-        <div class="images">
-            <img src="vrgame.jpg">
-            <img src="vrgame2.jpg">
-            <a href="#">Github link? Not yet done</a>
+
+    <section class="Infoaboutme" id="Infoaboutme" style="margin-bottom: -100px">
+      <h1 class="heading" style="margin-top: 90px; margin-bottom: -70px">
+        VR<span>Projects</span>
+      </h1>
+      <div class="projects">
+        <div class="projects-grid">
+          <div class="project-card scroll-reveal">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <div>
+                <h3>IoT-Based VR Rehabilitation</h3>
+                <p style="color: #a0a0a0; font-size: 0.9rem; margin: 0">
+                  Healthcare • IoT • VR
+                </p>
+              </div>
+            </div>
+            <p>
+              Revolutionary muscle healing solution combining virtual reality
+              gaming with IoT sensors for personalized rehabilitation therapy.
+              Features real-time feedback, gamification, and remote monitoring
+              capabilities for healthcare professionals.
+            </p>
+            <div class="project-images">
+              <div class="project-image"><i class="fas fa-heartbeat"></i></div>
+              <div class="project-image">
+                <i class="fas fa-vr-cardboard"></i>
+              </div>
+            </div>
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i>
+              Coming Soon
+            </a>
+          </div>
+
+          <div class="project-card scroll-reveal">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-mountain"></i>
+              </div>
+              <div>
+                <h3>Skybound Horizon</h3>
+                <p style="color: #a0a0a0; font-size: 0.9rem; margin: 0">
+                  Open World • Adventure • AI
+                </p>
+              </div>
+            </div>
+            <p>
+              🌌 An immersive open-world adventure featuring AI-driven
+              creatures, dynamic environments, and limitless exploration. Shape
+              your journey through vast landscapes filled with challenges,
+              secrets, and interactive elements that respond to your every
+              decision.
+            </p>
+            <div class="project-images">
+              <div class="project-image"><i class="fas fa-mountain"></i></div>
+              <div class="project-image"><i class="fas fa-robot"></i></div>
+            </div>
+            <a
+              href="https://github.com/JithuMorrison/Skybound_Horizon"
+              class="project-link"
+            >
+              <i class="fab fa-github"></i>
+              View on GitHub
+            </a>
+          </div>
+
+          <div class="project-card scroll-reveal">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-universal-access"></i>
+              </div>
+              <div>
+                <h3>BattleQuest</h3>
+                <p style="color: #a0a0a0; font-size: 0.9rem; margin: 0">
+                  Accessibility • Therapy • Gamification
+                </p>
+              </div>
+            </div>
+            <p>
+              🎮 Inclusive therapeutic game empowering individuals with
+              disabilities through engaging exercises. Features bubble popping
+              for hand coordination and interactive challenges that transform
+              rehabilitation into an exciting adventure with meaningful progress
+              tracking.
+            </p>
+            <div class="project-images">
+              <div class="project-image">
+                <i class="fas fa-universal-access"></i>
+              </div>
+            </div>
+            <a
+              href="https://github.com/JithuMorrison/BattleQuest"
+              class="project-link"
+            >
+              <i class="fab fa-github"></i>
+              Explore Project
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="jithucontainer1">
-      <h1>Skybound Horizon
-</h1>
-      <div class="aboutbox">
-        <p>🌌 Skybound Horizon is an open-world adventure where survival meets exploration in a dynamic, untamed universe. Encounter diverse AI-driven creatures, including goats, bears, humans, lizardmen, and the enigmatic Gogs, each with unique behaviors that bring the world to life. Shape your journey with interactive features like spawning, picking, and manipulating the environment to craft your own story. From vast landscapes to hidden secrets, every corner of this wild terrain offers challenges and surprises. Will you master the wilderness or fall prey to its perils? In Skybound Horizon, the choice is yours as you embrace the limitless horizon. 🌄<br><br>Skybound Horizon invites you to push the boundaries of exploration and creativity in an ever-evolving world. Interact with your surroundings, adapt to unpredictable AI behaviors, and uncover secrets hidden within the vast expanse.<br><br>
-
-          Whether you seek adventure, survival, or discovery, Skybound Horizon offers an unforgettable journey where every decision shapes your destiny. The horizon awaits—will you rise to the challenge?
-</p>
-        <div class="images">
-            <img src="vrgame.jpg">
-            <img src="vrgame2.jpg">
-            <a href="https://github.com/JithuMorrison/Skybound_Horizon">Visit Github Page !!</a>
-        </div>
-      </div>
-    </div>
-    <div class="jithucontainer1">
-      <h1>BattleQuest
-</h1>
-      <div class="aboutbox">
-        <p>🎮BattleQuest is an inclusive game designed to empower individuals with mental and physical disabilities through engaging and enjoyable exercises. This innovative game combines therapy with fun, offering activities like bubble popping to enhance hand coordination and donut eating challenges for improving head movement.<br><br>
-
-          Set in a vibrant, interactive world, BattleQuest transforms rehabilitation into an exciting adventure where players achieve milestones while having fun. Whether you're popping bubbles or reaching for donuts, every challenge is a step towards growth and empowerment. Join the quest today and make every move count! 🎯🍩
-</p>
-        <div class="images">
-            <img src="vrgame.jpg">
-            <a href="https://github.com/JithuMorrison/Skybound_Horizon">Visit Github Page !!</a>
-        </div>
-      </div>
-    </div>
-  </section>
     </section>
-  <section></section>
-  <section class="footer" id="footer">
-    <div class="box-container">
-      <div class="box">
-        <h3>Follow us on<i class="fa fa-youtube-play"></i></h3>
-        <p>for info on sentiment analysis</p>
-        <div class="share">
-          <a href="https://youtube.com/@jackorganisation?si=-1CPKt2egdeQ8oPh" class="fa fa-youtube-play btn"></a>
-          <a href="https://github.com/JithuMorrison" class="fa fa-github btn"></a>
-          <a href="https://www.instagram.com/jithumorrison/" class="fa fa-instagram btn"></a>
-          <a href="https://www.linkedin.com/in/jithu-morrison-s/" class="fa fa-linkedin btn"></a>
+
+    <section class="footer" id="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Follow us on<i class="fa fa-youtube-play"></i></h3>
+          <p>for info on sentiment analysis</p>
+          <div class="share">
+            <a
+              href="https://youtube.com/@jackorganisation?si=-1CPKt2egdeQ8oPh"
+              class="fa fa-youtube-play btn"
+            ></a>
+            <a
+              href="https://github.com/JithuMorrison"
+              class="fa fa-github btn"
+            ></a>
+            <a
+              href="https://www.instagram.com/jithumorrison/"
+              class="fa fa-instagram btn"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jithu-morrison-s/"
+              class="fa fa-linkedin btn"
+            ></a>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Concact Info</h3>
+          <a href="#" class="links"
+            ><i class="fa fa-phone"></i>+91 8754823987</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-envelope"></i>jithus2004@gmail.com</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-envelope"></i>jithumorrison2210564@ssn.edu.in</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-map-marker"></i>TN, India</a
+          >
         </div>
       </div>
-      <div class="box">
-        <h3>Concact Info</h3>
-        <a href="#" class="links"><i class="fa fa-phone"></i>+91 8754823987</a>
-        <a href="#" class="links"><i class="fa fa-envelope"></i>jithus2004@gmail.com</a>
-        <a href="#" class="links"><i class="fa fa-envelope"></i>jithumorrison2210564@ssn.edu.in</a>
-        <a href="#" class="links"><i class="fa fa-map-marker"></i>TN, India</a>
-      </div>
-    </div>
-  </section>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-</body>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      // Scroll reveal animation
+      function revealOnScroll() {
+        const reveals = document.querySelectorAll(".scroll-reveal");
 
+        reveals.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 150;
+
+          if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add("revealed");
+          }
+        });
+      }
+
+      // Mouse interaction effects
+      document.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        // Create trailing effect
+        if (Math.random() > 0.9) {
+          const trail = document.createElement("div");
+          trail.style.position = "fixed";
+          trail.style.left = mouseX + "px";
+          trail.style.top = mouseY + "px";
+          trail.style.width = "4px";
+          trail.style.height = "4px";
+          trail.style.background = "rgba(0, 255, 255, 0.6)";
+          trail.style.borderRadius = "50%";
+          trail.style.pointerEvents = "none";
+          trail.style.zIndex = "9999";
+          trail.style.animation = "fade-out 1s ease-out forwards";
+          document.body.appendChild(trail);
+
+          setTimeout(() => trail.remove(), 1000);
+        }
+      });
+
+      // Add fade-out animation
+      const style = document.createElement("style");
+      style.textContent = `
+          @keyframes fade-out {
+              to {
+                  opacity: 0;
+                  transform: scale(0);
+              }
+          }
+      `;
+      document.head.appendChild(style);
+
+      window.addEventListener("scroll", revealOnScroll);
+      window.addEventListener("load", revealOnScroll);
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
