@@ -4,13 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Jithu's web</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link href="home.css" rel="stylesheet" type="text/css" />
@@ -20,20 +23,70 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
+      :root {
+        --primary: #00ffff;
+        --secondary: #ff0080;
+        --tertiary: #7c3aed;
+        --quaternary: #00ff00;
+        --dark-bg: #0a0a1a;
+        --darker-bg: #050510;
+        --card-bg: rgba(15, 15, 35, 0.7);
+        --text-light: rgba(255, 255, 255, 0.9);
+        --text-muted: rgba(255, 255, 255, 0.6);
+        --glow: 0 0 15px rgba(0, 255, 255, 0.5);
+      }
+
       body {
         min-height: 100vh;
         background: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Photos-Universe.jpg")
           no-repeat;
         background-size: cover;
         background-position: center;
+        font-family: "Space Grotesk", sans-serif;
         color: #ffffff;
         overflow-x: hidden;
       }
 
+      .Infoaboutme {
+        padding: 8rem 5% 4rem;
+      }
+
       .projects {
-        padding: 2rem 2rem 8rem;
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
+      }
+
+      .headin {
+        font-family: "Orbitron", sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 5rem;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .headin span {
+        font-family: "Orbitron", sans-serif;
+        color: var(--primary);
+        position: relative;
+      }
+
+      .headin::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--primary),
+          transparent
+        );
       }
 
       .projects-grid {
@@ -44,18 +97,18 @@
       }
 
       .project-card {
-        background: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(255, 255, 255, 0.05) 100%
-        );
+        background: var(--card-bg);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 20px;
-        padding: 2rem;
+        padding: 2.5rem;
         transition: all 0.5s ease;
         position: relative;
         overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        min-height: 450px;
+        display: flex;
+        flex-direction: column;
       }
 
       .project-card::before {
@@ -71,7 +124,7 @@
           rgba(255, 255, 255, 0.1),
           transparent
         );
-        transition: left 0.5s ease;
+        transition: left 0.7s ease;
       }
 
       .project-card:hover::before {
@@ -79,41 +132,68 @@
       }
 
       .project-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2);
-        border-color: #00ffff;
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 255, 255, 0.3);
+        border-color: var(--primary);
       }
 
       .project-header {
         display: flex;
         align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
       }
 
       .project-icon {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 15px;
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(
+          135deg,
+          var(--tertiary) 0%,
+          var(--secondary) 100%
+        );
+        border-radius: 18px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: white;
+        flex-shrink: 0;
+        box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
       }
 
       .project-card h3 {
-        font-family: "Orbitron", monospace;
-        font-size: 1.5rem;
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.8rem;
         font-weight: 700;
-        color: #00ffff;
+        color: var(--primary);
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-tag {
+        background: rgba(0, 255, 255, 0.1);
+        color: var(--primary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 50px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
       }
 
       .project-card p {
-        color: #a0a0a0;
+        color: var(--text-muted);
         line-height: 1.8;
         margin: 1.5rem 0;
+        font-size: 1.05rem;
+        flex-grow: 1;
       }
 
       .project-images {
@@ -124,36 +204,95 @@
       }
 
       .project-image {
-        width: 100px;
-        height: 80px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        width: 80px;
+        height: 60px;
+        background: linear-gradient(
+          135deg,
+          var(--tertiary) 0%,
+          var(--primary) 100%
+        );
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 2rem;
+        font-size: 1.8rem;
         transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+        overflow: hidden;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       .project-image:hover {
         transform: scale(1.1);
+        box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
+      }
+
+      .project-imagesn {
+        display: flex;
+        gap: 1rem;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+      }
+
+      .project-imagen {
+        width: 150px;
+        height: 100px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+      }
+
+      .project-imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .project-imagen:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
+      }
+
+      .project-imagen:hover img {
+        transform: scale(1.1);
+      }
+
+      .project-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: auto;
       }
 
       .project-link {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        color: #00ffff;
+        color: var(--primary);
         text-decoration: none;
         font-weight: 600;
         transition: all 0.3s ease;
-        margin-top: 1rem;
+        padding: 0.7rem 1.5rem;
+        border-radius: 50px;
+        background: rgba(0, 255, 255, 0.1);
+        border: 1px solid rgba(0, 255, 255, 0.2);
       }
 
       .project-link:hover {
-        text-shadow: 0 0 10px #00ffff;
-        transform: translateX(5px);
+        background: rgba(0, 255, 255, 0.2);
+        transform: translateY(-3px);
+        box-shadow: var(--glow);
+      }
+
+      .project-link i {
+        font-size: 1.1rem;
       }
 
       .jithucolor {
@@ -162,6 +301,98 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: gradient-shift 3s ease-in-out infinite;
+      }
+
+      .header {
+        backdrop-filter: blur(10px);
+        background: rgba(10, 10, 30, 0.7);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .header .logo {
+        font-family: "Orbitron", sans-serif;
+        color: var(--primary);
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+
+      .header .logo:hover {
+        text-shadow: var(--glow);
+      }
+
+      .header .navbar {
+        display: flex;
+      }
+
+      .header .navbar a {
+        color: var(--text-light);
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .header .navbar a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: width 0.3s ease;
+      }
+
+      .header .navbar a:hover {
+        color: var(--primary);
+      }
+
+      .header .navbar a:hover::after {
+        width: 100%;
+      }
+
+      .header .icons div {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .header .icons div:hover {
+        transform: scale(1.1);
+      }
+
+      .header .search-form {
+        position: absolute;
+        top: 110%;
+        right: 2%;
+        background: rgba(15, 15, 35, 0.9);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .header .search-form.active {
+        transform: scaleY(1);
+      }
+
+      .header .search-form input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        color: var(--text-light);
+      }
+
+      .header .search-form label {
+        color: var(--text-light);
+        cursor: pointer;
+      }
+
+      .header .search-form label:hover {
+        color: var(--primary);
       }
 
       @keyframes gradient-shift {
@@ -175,6 +406,11 @@
       }
 
       @media (max-width: 768px) {
+        .headin {
+          font-size: 2.5rem;
+          margin-bottom: 3rem;
+        }
+
         .projects-grid {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -182,10 +418,59 @@
 
         .project-card {
           padding: 1.5rem;
+          min-height: auto;
         }
 
-        .heading {
+        .project-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .project-icon {
+          width: 60px;
+          height: 60px;
+          font-size: 1.5rem;
+        }
+
+        .project-card h3 {
+          font-size: 1.5rem;
+        }
+
+        .project-card p {
+          font-size: 1rem;
+          margin: 1rem 0;
+        }
+
+        .project-imagesn {
+          justify-content: center;
+        }
+
+        .project-imagen {
+          width: 120px;
+          height: 80px;
+        }
+
+        .project-links {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+
+        .project-link {
+          justify-content: center;
+          padding: 0.6rem 1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .headin {
           font-size: 2rem;
+        }
+
+        .project-imagen {
+          width: 100px;
+          height: 70px;
         }
       }
     </style>
@@ -211,7 +496,6 @@
         <label for="search-box" class="fa fa-search"></label>
       </form>
     </header>
-    <div class="header"></div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
     <label for="openSidebarMenu" class="sidebarIconToggle">
       <div class="spinner diagonal part-1"></div>
@@ -229,12 +513,13 @@
       </ul>
     </div>
 
-    <section class="Infoaboutme" id="Infoaboutme" style="margin-bottom: -100px">
-      <h1 class="heading" style="margin-top: 90px; margin-bottom: -70px">
-        VR<span>Projects</span>
+    <section class="Infoaboutme" id="Infoaboutme">
+      <h1 class="headin" style="margin-top: 10px; margin-bottom: 20px">
+        VR <span>Projects</span>
       </h1>
       <div class="projects">
         <div class="projects-grid">
+          <!-- Project 1 -->
           <div class="project-card scroll-reveal">
             <div class="project-header">
               <div class="project-icon">
@@ -242,9 +527,11 @@
               </div>
               <div>
                 <h3>IoT-Based VR Rehabilitation</h3>
-                <p style="color: #a0a0a0; font-size: 0.9rem; margin: 0">
-                  Healthcare • IoT • VR
-                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Healthcare</span>
+                  <span class="project-tag">IoT</span>
+                  <span class="project-tag">VR</span>
+                </div>
               </div>
             </div>
             <p>
@@ -253,18 +540,46 @@
               Features real-time feedback, gamification, and remote monitoring
               capabilities for healthcare professionals.
             </p>
-            <div class="project-images">
-              <div class="project-image"><i class="fas fa-heartbeat"></i></div>
+            <div class="project-imagesn">
+              <div class="project-image">
+                <i class="fas fa-heartbeat"></i>
+              </div>
               <div class="project-image">
                 <i class="fas fa-vr-cardboard"></i>
               </div>
+              <div class="project-image">
+                <i class="fas fa-gamepad"></i>
+              </div>
             </div>
-            <a href="#" class="project-link">
-              <i class="fab fa-github"></i>
-              Coming Soon
-            </a>
+
+            <div class="project-imagesn">
+              <div class="project-imagen">
+                <img
+                  src="https://images.unsplash.com/photo-1581093450021-4a7360e9a9e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="VR Rehabilitation"
+                />
+              </div>
+              <div class="project-imagen">
+                <img
+                  src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="IoT Sensors"
+                />
+              </div>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+            </div>
           </div>
 
+          <!-- Project 2 -->
           <div class="project-card scroll-reveal">
             <div class="project-header">
               <div class="project-icon">
@@ -272,31 +587,62 @@
               </div>
               <div>
                 <h3>Skybound Horizon</h3>
-                <p style="color: #a0a0a0; font-size: 0.9rem; margin: 0">
-                  Open World • Adventure • AI
-                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Open World</span>
+                  <span class="project-tag">Adventure</span>
+                  <span class="project-tag">AI</span>
+                </div>
               </div>
             </div>
             <p>
-              🌌 An immersive open-world adventure featuring AI-driven
-              creatures, dynamic environments, and limitless exploration. Shape
-              your journey through vast landscapes filled with challenges,
-              secrets, and interactive elements that respond to your every
-              decision.
+              An immersive open-world adventure featuring AI-driven creatures,
+              dynamic environments, and limitless exploration. Shape your
+              journey through vast landscapes filled with challenges, secrets,
+              and interactive elements that respond to your every decision.
             </p>
-            <div class="project-images">
-              <div class="project-image"><i class="fas fa-mountain"></i></div>
-              <div class="project-image"><i class="fas fa-robot"></i></div>
+            <div class="project-imagesn">
+              <div class="project-image">
+                <i class="fas fa-mountain"></i>
+              </div>
+              <div class="project-image">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="project-image">
+                <i class="fas fa-cloud"></i>
+              </div>
             </div>
-            <a
-              href="https://github.com/JithuMorrison/Skybound_Horizon"
-              class="project-link"
-            >
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
+
+            <div class="project-imagesn">
+              <div class="project-imagen">
+                <img
+                  src="https://images.unsplash.com/photo-1581093450021-4a7360e9a9e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="VR Rehabilitation"
+                />
+              </div>
+              <div class="project-imagen">
+                <img
+                  src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="IoT Sensors"
+                />
+              </div>
+            </div>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/JithuMorrison/Skybound_Horizon"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+            </div>
           </div>
 
+          <!-- Project 3 -->
           <div class="project-card scroll-reveal">
             <div class="project-header">
               <div class="project-icon">
@@ -304,13 +650,15 @@
               </div>
               <div>
                 <h3>BattleQuest</h3>
-                <p style="color: #a0a0a0; font-size: 0.9rem; margin: 0">
-                  Accessibility • Therapy • Gamification
-                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Accessibility</span>
+                  <span class="project-tag">Therapy</span>
+                  <span class="project-tag">Gamification</span>
+                </div>
               </div>
             </div>
             <p>
-              🎮 Inclusive therapeutic game empowering individuals with
+              Inclusive therapeutic game empowering individuals with
               disabilities through engaging exercises. Features bubble popping
               for hand coordination and interactive challenges that transform
               rehabilitation into an exciting adventure with meaningful progress
@@ -320,14 +668,40 @@
               <div class="project-image">
                 <i class="fas fa-universal-access"></i>
               </div>
+              <div class="project-image">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <div class="project-image">
+                <i class="fas fa-chart-line"></i>
+              </div>
             </div>
-            <a
-              href="https://github.com/JithuMorrison/BattleQuest"
-              class="project-link"
-            >
-              <i class="fab fa-github"></i>
-              Explore Project
-            </a>
+            <div class="project-imagesn">
+              <div class="project-imagen">
+                <img
+                  src="https://images.unsplash.com/photo-1581093450021-4a7360e9a9e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="VR Rehabilitation"
+                />
+              </div>
+              <div class="project-imagen">
+                <img
+                  src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="IoT Sensors"
+                />
+              </div>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/JithuMorrison/BattleQuest"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
       </div>
