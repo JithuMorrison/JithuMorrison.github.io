@@ -1,324 +1,428 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Jithu's web</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Jithu's web</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="home.css" rel="stylesheet" type="text/css" />
-  <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-</head>
-
-<body>
-  <header class="header">
-    <a href="#" class="logo"> <i class="fa fa-shield"></i>Jithu's Website</a>
-    <nav class="navbar">
-      <a href="#home"> Home </a>
-      <a href="#products"> Project Areas </a>
-      <a href="#Infoaboutme"> About me </a>
-      <a href="#footer"> Contact us!! </a>
-    </nav>
-    <div class="icons">
-      <div class="fa fa-bars" id="menu-btn"></div>
-      <div class="fa fa-search" id="search-btn"></div>
-      <a href="login.html">
-        <div class="fa fa-user" id="login-btn"></div>
-      </a>
-    </div>
-    <form class="search-form">
-      <input type="search" id="search-box" placeholder="Search me...">
-      <label for="search-box" class="fa fa-search"></label>
-    </form>
-  </header>
-  <div class="header"></div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-      <li>Jithu <span>Web Developer</span></li>
-      <li><a href="#" target="_blank">Web dev</a></li>
-      <li><a href="#" target="_blank">App dev</a></li>
-      <li><a href="#" target="_blank">Game developer</a></li>
-      <li><a href="#" target="_blank">YouTuber</a></li>
-      <li><a href="#" target="_blank">Student</a></li>
-    </ul>
-  </div>
-  <div class="Header">
-    <div class="Header-background"></div>
-    <div class="Header-content">
-      <div class="Header-hero">
-        <h1>Hii all!! Welcome to<br/> JITHU'S WEB</h1>
-        <p>Learn more about me</p>
-        <button class="Button"><a href="Jithu's_Resume.pdf">View Portfolio</a></button>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> <i class="fa fa-shield"></i>Jithu's Website</a>
+      <nav class="navbar">
+        <a href="#home"> Home </a>
+        <a href="#products"> Project Areas </a>
+        <a href="#Infoaboutme"> About me </a>
+        <a href="#footer"> Contact us!! </a>
+      </nav>
+      <div class="icons">
+        <div class="fa fa-bars" id="menu-btn"></div>
+        <div class="fa fa-search" id="search-btn"></div>
+        <a href="login.html">
+          <div class="fa fa-user" id="login-btn"></div>
+        </a>
       </div>
-      <div class="Header-visuals">
-        <div class="Iphone"></div>
-      </div>
+      <form class="search-form">
+        <input type="search" id="search-box" placeholder="Search me..." />
+        <label for="search-box" class="fa fa-search"></label>
+      </form>
+    </header>
+    <div class="header"></div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <li>Jithu <span>Web Developer</span></li>
+        <li><a href="#" target="_blank">Web dev</a></li>
+        <li><a href="#" target="_blank">App dev</a></li>
+        <li><a href="#" target="_blank">Game developer</a></li>
+        <li><a href="#" target="_blank">YouTuber</a></li>
+        <li><a href="#" target="_blank">Student</a></li>
+      </ul>
     </div>
-  </div>
-  <div class="display">
-
-  </div>
-  <section class="home" id="home">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/a0778e71805451.5ca68f846fdc7.gif" alt="GOAT" class="goat">
-  </section>
-  <section class="homo" id="homo">
-    <div class="homecontent">
-      <h3>Hello Guys, It's me</h3>
-      <h1>Jithu Morrison S</h1>
-      <h3>I'm a <span class="multiple-text"></span></h3>
-      <p>A passionate engineering student who loves turning ideas into reality through app, web and game development. Skilled in Flutter, Python, and machine learning, always exploring innovative digital solutions.</p>
-      <div class="socialmedia">
-        <a href="https://www.youtube.com/@JackOrganisation" class="fa fa-youtube-play"></a>
-        <a href="https://github.com/JithuMorrison" class="fa fa-github"></a>
-        <a href="https://www.instagram.com/jithumorrison/" class="fa fa-instagram"></a>
-        <a href="https://www.linkedin.com/in/jithu-morrison-s/" class="fa fa-linkedin"></a>
-      </div>
-      <a href="Jithu's Resume (1).pdf" class="botn">Download Resume</a>
-    </div>
-    <div class="homeimg">
-      <img src="jithu.png" alt="Logo" style="width: 318px;height: 354px;">
-    </div>
-  </section>
-  <div class="animals" >
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/975b2e71805451.5ca68c8ab8cb6.gif" alt="Lion" class="anione">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2239cf71805451.5ca68c8ab925c.gif" alt="Tiger" class="ani">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b1ac8371805451.5ca68c8ab8fea.gif" alt="Leopard" class="ani">
-  </div>
-  <section class="products" id="products">
-    <h1 class="heading">My<span>Project Areas</span></h1>
-    <div class=" swiper products-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide box">
-          <img
-            src="https://appsnado.com/blog/wp-content/uploads/2023/06/Importance-Of-Frame-Rate-In-Virtual-Reality-Headset.jpg">
-          <h1>Game Development (VR)</h1>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half"></i>
-          </div>
-          <a href="Gamedev.html" class="btn">View</a>
+    <div class="Header">
+      <div class="Header-background"></div>
+      <div class="Header-content">
+        <div class="Header-hero">
+          <h1>
+            Hii all!! Welcome to<br />
+            JITHU'S WEB
+          </h1>
+          <p>Learn more about me</p>
+          <button class="Button">
+            <a href="Jithu's_Resume.pdf">View Portfolio</a>
+          </button>
         </div>
-        <div class="swiper-slide box">
-          <img
-            src="https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg">
-          <h1>App Development (Flutter)</h1>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <a href="Appdev.html" class="btn">View</a>
-        </div>
-        <div class="swiper-slide box">
-          <img src="https://assets.website-files.com/5b972af1e063f8d71a69b94b/5d1161015a662a46e083fbbc_app-03.jpg">
-          <h1>Web Development (HTML, CSS, Js)</h1>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <a href="Webdev.html" class="btn">View</a>
-        </div>
-        <div class="swiper-slide box">
-          <img src="https://th.bing.com/th/id/OIP.3_jSg1aG9GC-Su1z-C0ZdAHaG1?rs=1&pid=ImgDetMain">
-          <h1>AI and ML models (Python)</h1>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half"></i>
-          </div>
-          <a href="aiml.html" class="btn">View</a>
-        </div>
-        <div class="swiper-slide box">
-          <img
-            src="https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202010/binary-2372130_1280-1200x853.jpg?e16hw3.SiR.Z4maCEfZhLUShdhUlMSOL">
-          <h1>Competitive Programming</h1>
-          <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <a href="cp.html" class="btn">View</a>
+        <div class="Header-visuals">
+          <div class="Iphone"></div>
         </div>
       </div>
     </div>
-  </section>
-  <section class="Infoaboutme" id="Infoaboutme">
-    <h1 class="heading">About<span>Me</span></h1>
-    <section class="Infoofme">
-      <div class="jithucontainer">
-        <h1>About Me</h1>
-        <div class="aboutbox">
-          <p>Hey there! I'm Jithu Morrison S, a software developer driven by the passion to bring ideas to life. Whether
-            it's crafting sleek apps or creating robust systems, I'm here to make it happen. Let's turn your vision into
-            digital magic!
-
-            <br> 💻 Tech Enthusiast: From building sleek mobile apps to architecting robust web platforms and diving
-            into the intricacies of game development, I'm deeply immersed in the dynamic world of software engineering.
-
-            <br> 🔍 Continuous Learner: In the ever-evolving landscape of technology, I'm constantly seeking to expand
-            my knowledge. Whether it's mastering new programming languages, exploring emerging frameworks, or delving
-            into cutting-edge research, I'm always up for the challenge.
-
-            <br> 🎨 Creative Innovator: Beyond just writing code, I'm passionate about harnessing technology to create
-            meaningful and impactful experiences. Whether it's through intuitive user interfaces, immersive gaming
-            environments, or innovative software solutions, <br>I strive to inspire and delight users with my work.
-          </p>
-          <img
-            src="jithu2.jpeg">
+    <div class="display"></div>
+    <section class="home" id="home">
+      <img
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/a0778e71805451.5ca68f846fdc7.gif"
+        alt="GOAT"
+        class="goat"
+      />
+    </section>
+    <section class="homo" id="homo">
+      <div class="homecontent">
+        <h3>Hello Guys, It's me</h3>
+        <h1>Jithu Morrison S</h1>
+        <h3>I'm a <span class="multiple-text"></span></h3>
+        <p>
+          A passionate engineering student who loves turning ideas into reality
+          through app, web and game development. Skilled in Flutter, Python, and
+          machine learning, always exploring innovative digital solutions.
+        </p>
+        <div class="socialmedia">
+          <a
+            href="https://www.youtube.com/@JackOrganisation"
+            class="fa fa-youtube-play"
+          ></a>
+          <a href="https://github.com/JithuMorrison" class="fa fa-github"></a>
+          <a
+            href="https://www.instagram.com/jithumorrison/"
+            class="fa fa-instagram"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/jithu-morrison-s/"
+            class="fa fa-linkedin"
+          ></a>
         </div>
+        <a href="Jithu's Resume (1).pdf" class="botn">Download Resume</a>
       </div>
-      <div class="jithucontainer">
-        <div class="aboutbox1">
-          <img src="jithu1.jpg">
-          <p><b>PROJECTS</b><br>IOT - based Virtual Reality comforting movement
-            design for rehabilitation (04/2022 - 03/2024) <br>
-            - Developed a VR game for Rehabilitation using Unity and C# and analyze improvements using sensors
-            <br><br>
-            Sentiment Analysis on Social Media Presence
-            (12/2023) <br>
-            - A website to performs sentiment analysis on specific person, product or organisation <br><br>
-            Recipe App (03/2024) <br>
-            - An App to suggest recipes using APIs and AI with interactive UI<br><br>
-            Trauma Detection App (03/2024 - Present) <br>
-            - An App designed to predict whether a person has trauma or not and also type of trauma based on user's
-            chats <br><br>
-            EduTrack App (06/2024 - 06/2024)<br>
-            - An app for managing journals and conferences efficiently, providing robust features for organizing and tracking educational and professional events.
-          </p>
-
-        </div>
+      <div class="homeimg">
+        <img src="jithu.png" alt="Logo" style="width: 318px; height: 354px" />
       </div>
-      <div class="jithucontainer3">
-        <div class="aboutbox2">
-          <a href="Jithu's Resume (1).pdf" target="_blank">View my Resume</a>
-        </div>
-      </div>
-      <div class="jithucontainer3">
-        <div class="aboutbox2">
-          <a href="https://github.com/JithuMorrison" target="_blank">View my Github</a>
+    </section>
+    <div class="animals">
+      <img
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/975b2e71805451.5ca68c8ab8cb6.gif"
+        alt="Lion"
+        class="anione"
+      />
+      <img
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2239cf71805451.5ca68c8ab925c.gif"
+        alt="Tiger"
+        class="ani"
+      />
+      <img
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b1ac8371805451.5ca68c8ab8fea.gif"
+        alt="Leopard"
+        class="ani"
+      />
+    </div>
+    <section class="products" id="products">
+      <h1 class="heading">My<span>Project Areas</span></h1>
+      <div class="swiper products-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img
+              src="https://appsnado.com/blog/wp-content/uploads/2023/06/Importance-Of-Frame-Rate-In-Virtual-Reality-Headset.jpg"
+            />
+            <h1>Game Development (VR)</h1>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half"></i>
+            </div>
+            <a href="Gamedev.html" class="btn">View</a>
+          </div>
+          <div class="swiper-slide box">
+            <img
+              src="https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg"
+            />
+            <h1>App Development (Flutter)</h1>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <a href="Appdev.html" class="btn">View</a>
+          </div>
+          <div class="swiper-slide box">
+            <img
+              src="https://assets.website-files.com/5b972af1e063f8d71a69b94b/5d1161015a662a46e083fbbc_app-03.jpg"
+            />
+            <h1>Web Development (HTML, CSS, Js)</h1>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <a href="Webdev.html" class="btn">View</a>
+          </div>
+          <div class="swiper-slide box">
+            <img
+              src="https://th.bing.com/th/id/OIP.3_jSg1aG9GC-Su1z-C0ZdAHaG1?rs=1&pid=ImgDetMain"
+            />
+            <h1>AI and ML models (Python)</h1>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half"></i>
+            </div>
+            <a href="aiml.html" class="btn">View</a>
+          </div>
+          <div class="swiper-slide box">
+            <img
+              src="https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202010/binary-2372130_1280-1200x853.jpg?e16hw3.SiR.Z4maCEfZhLUShdhUlMSOL"
+            />
+            <h1>Competitive Programming</h1>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <a href="cp.html" class="btn">View</a>
+          </div>
         </div>
       </div>
     </section>
-  </section>
-  <section class="services" id="services">
-    <h2 class="heading">Our<span>Services</span></h2>
-    <div class="services-container">
-      <div class="services-box">
-        <i class="fa fa-cubes"></i>
-        <h3>Hobbies</h3>
-        <p>Discover more about my interests</p>
-        <a href="hobby.html" class="botn">Read More</a>
-      </div>
-      <div class="services-box">
-        <i class="fa fa-code"></i>
-        <h3>Blogs</h3>
-        <p>See what’s on my mind</p>
-        <a href="blogs.html" class="botn">Read More</a>
-      </div>
-      <div class="services-box">
-        <i class="fa fa-code"></i>
-        <h3>Under Build</h3>
-        <p>👷</p>
-        <a href="#" class="botn">Read More</a>
-      </div>
-    </div>
-  </section>
-  <section class="portfolio" id="portfolio">
-    <h2 class="heading">Latest <span>Projects</span></h2>
-    <div class="portfolio-container">
-      <div class="portfolio-box">
-        <img src="https://th.bing.com/th/id/R.4ecf67eb316545a8f93d381eb42e8c98?rik=4Ks7L8KCUQHw1w&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f9%2f3%2f0%2f1390231-computer-science-wallpapers-2560x1600-for-windows-7.jpg&ehk=BxJuy69ebNdA0sCY3gQK4IAB3Fconrkec8AzZPdppKA%3d&risl=&pid=ImgRaw&r=0" alt="No">
-        <h1 class="portfolio-text">SwiftPDF</h1>
-        <div class="portfolio-layer">
-          <h4>SwiftPDF</h4>
-          <p>PDF Manipulation</p>
-          <a href="https://jithumorrison.github.io/SwiftPDF/"><i class="fa fa-external-link"></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="https://img.freepik.com/premium-photo/modern-tech-background-networking-connections_1106493-706.jpg" alt="No">
-        <h1 class="portfolio-text">TuDu</h1>
-        <div class="portfolio-layer">
-          <h4>TuDu</h4>
-          <p>Plan Your Works</p>
-          <a href="https://jithumorrison.github.io/TuDu/"><i class="fa fa-external-link"></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="https://e0.pxfuel.com/wallpapers/439/1021/desktop-wallpaper-gilles-informatique-depannage-informatique-et-creation-de-programmation.jpg" alt="No">
-        <h1 class="portfolio-text">Micro86</h1>
-        <div class="portfolio-layer">
-          <h4>Micro86</h4>
-          <p>Code kit from Home</p>
-          <a href="https://jithumorrison.github.io/Micro86"><i class="fa fa-external-link"></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="https://th.bing.com/th/id/OIP.1Q0RwhwTtVO03RocANtAtgHaEJ?rs=1&pid=ImgDetMain" alt="No">
-        <h1 class="portfolio-text">AudIT LiART</h1>
-        <div class="portfolio-layer">
-          <h4>AudIT LiART</h4>
-          <p>Get Your Audits</p>
-          <a href="https://audit-liart.vercel.app/"><i class="fa fa-external-link"></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="https://png.pngtree.com/thumb_back/fh260/background/20230723/pngtree-high-quality-3d-illustration-of-waves-and-data-grid-on-blockchain-image_3779069.jpg" alt="No">
-        <h1 class="portfolio-text">AgaramPromoters</h1>
-        <div class="portfolio-layer">
-          <h4>AgaramPromoters</h4>
-          <p>Wanna buy Land?</p>
-          <a href="https://www.agarampromoters.com/"><i class="fa fa-external-link"></i></a>
-        </div>
-      </div>
-      <div class="portfolio-box">
-        <img src="https://wallpapercave.com/wp/zuiHX0K.jpg" alt="No">
-        <h1 class="portfolio-text">Web Design</h1>
-        <div class="portfolio-layer">
-          <h4>Web Design</h4>
-          <p>content</p>
-          <a href="#"><i class="fa fa-external-link"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section></section>
-  <section class="footer" id="footer">
-    <div class="box-container">
-      <div class="box">
-        <h3>Follow us on<i class="fa fa-youtube-play"></i></h3>
-        <p>for more info on myself</p>
-        <div class="share">
-          <a href="https://youtube.com/@jackorganisation?si=-1CPKt2egdeQ8oPh" class="fa fa-youtube-play btn"></a>
-          <a href="https://github.com/JithuMorrison" class="fa fa-github btn"></a>
-          <a href="https://www.instagram.com/jithumorrison/" class="fa fa-instagram btn"></a>
-          <a href="https://www.linkedin.com/in/jithu-morrison-s/" class="fa fa-linkedin btn"></a>
-        </div>
-      </div>
-      <div class="box">
-        <h3>Concact Info</h3>
-        <a href="#" class="links"><i class="fa fa-clock-o"></i>Available</a>
-        <a href="#" class="links"><i class="fa fa-calendar"></i>Mon - Fri: 9 AM - 6 PM IST</a>
-        <a href="#" class="links"><i class="fa fa-envelope"></i>jithus2004@gmail.com</a>
-        <a href="#" class="links"><i class="fa fa-envelope"></i>jithumorrison2210564@ssn.edu.in</a>
-        <a href="#" class="links"><i class="fa fa-map-marker"></i>TN, India</a>
-      </div>
-    </div>
-  </section>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-</body>
+    <section class="Infoaboutme" id="Infoaboutme">
+      <h1 class="heading">About<span>Me</span></h1>
+      <section class="Infoofme">
+        <div class="jithucontainer">
+          <h1>About Me</h1>
+          <div class="aboutbox">
+            <p>
+              Hey there! I'm Jithu Morrison S, a software developer driven by
+              the passion to bring ideas to life. Whether it's crafting sleek
+              apps or creating robust systems, I'm here to make it happen. Let's
+              turn your vision into digital magic!
 
+              <br />
+              💻 Tech Enthusiast: From building sleek mobile apps to
+              architecting robust web platforms and diving into the intricacies
+              of game development, I'm deeply immersed in the dynamic world of
+              software engineering.
+
+              <br />
+              🔍 Continuous Learner: In the ever-evolving landscape of
+              technology, I'm constantly seeking to expand my knowledge. Whether
+              it's mastering new programming languages, exploring emerging
+              frameworks, or delving into cutting-edge research, I'm always up
+              for the challenge.
+
+              <br />
+              🎨 Creative Innovator: Beyond just writing code, I'm passionate
+              about harnessing technology to create meaningful and impactful
+              experiences. Whether it's through intuitive user interfaces,
+              immersive gaming environments, or innovative software solutions,
+              <br />I strive to inspire and delight users with my work.
+            </p>
+            <img src="jithu2.jpeg" />
+          </div>
+        </div>
+        <div class="jithucontainer">
+          <div class="aboutbox1">
+            <img src="jithu1.jpg" />
+            <p>
+              <b>PROJECTS</b><br />IOT - based Virtual Reality comforting
+              movement design for rehabilitation (04/2022 - 03/2024) <br />
+              - Developed a VR game for Rehabilitation using Unity and C# and
+              analyze improvements using sensors
+              <br /><br />
+              Sentiment Analysis on Social Media Presence (12/2023) <br />
+              - A website to performs sentiment analysis on specific person,
+              product or organisation <br /><br />
+              Recipe App (03/2024) <br />
+              - An App to suggest recipes using APIs and AI with interactive
+              UI<br /><br />
+              Trauma Detection App (03/2024 - Present) <br />
+              - An App designed to predict whether a person has trauma or not
+              and also type of trauma based on user's chats <br /><br />
+              EduTrack App (06/2024 - 06/2024)<br />
+              - An app for managing journals and conferences efficiently,
+              providing robust features for organizing and tracking educational
+              and professional events.
+            </p>
+          </div>
+        </div>
+        <div class="jithucontainer3">
+          <div class="aboutbox2">
+            <a href="Jithu's Resume (1).pdf" target="_blank">View my Resume</a>
+          </div>
+        </div>
+        <div class="jithucontainer3">
+          <div class="aboutbox2">
+            <a href="https://github.com/JithuMorrison" target="_blank"
+              >View my Github</a
+            >
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="services" id="services">
+      <h2 class="heading">Our<span>Services</span></h2>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="fa fa-cubes"></i>
+          <h3>Hobbies</h3>
+          <p>Discover more about my interests</p>
+          <a href="hobby.html" class="botn">Read More</a>
+        </div>
+        <div class="services-box">
+          <i class="fa fa-code"></i>
+          <h3>Blogs</h3>
+          <p>See what’s on my mind</p>
+          <a href="blogs.html" class="botn">Read More</a>
+        </div>
+        <div class="services-box">
+          <i class="fa fa-code"></i>
+          <h3>Under Build</h3>
+          <p>👷</p>
+          <a href="#" class="botn">Read More</a>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Latest <span>Projects</span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img
+            src="https://th.bing.com/th/id/R.4ecf67eb316545a8f93d381eb42e8c98?rik=4Ks7L8KCUQHw1w&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f9%2f3%2f0%2f1390231-computer-science-wallpapers-2560x1600-for-windows-7.jpg&ehk=BxJuy69ebNdA0sCY3gQK4IAB3Fconrkec8AzZPdppKA%3d&risl=&pid=ImgRaw&r=0"
+            alt="No"
+          />
+          <h1 class="portfolio-text">SwiftPDF</h1>
+          <div class="portfolio-layer">
+            <h4>SwiftPDF</h4>
+            <p>PDF Manipulation</p>
+            <a href="https://jithumorrison.github.io/SwiftPDF/"
+              ><i class="fa fa-external-link"></i
+            ></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://img.freepik.com/premium-photo/modern-tech-background-networking-connections_1106493-706.jpg"
+            alt="No"
+          />
+          <h1 class="portfolio-text">TuDu</h1>
+          <div class="portfolio-layer">
+            <h4>TuDu</h4>
+            <p>Plan Your Works</p>
+            <a href="https://jithumorrison.github.io/TuDu/"
+              ><i class="fa fa-external-link"></i
+            ></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://e0.pxfuel.com/wallpapers/439/1021/desktop-wallpaper-gilles-informatique-depannage-informatique-et-creation-de-programmation.jpg"
+            alt="No"
+          />
+          <h1 class="portfolio-text">Micro86</h1>
+          <div class="portfolio-layer">
+            <h4>Micro86</h4>
+            <p>Code kit from Home</p>
+            <a href="https://jithumorrison.github.io/Micro86"
+              ><i class="fa fa-external-link"></i
+            ></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://th.bing.com/th/id/OIP.1Q0RwhwTtVO03RocANtAtgHaEJ?rs=1&pid=ImgDetMain"
+            alt="No"
+          />
+          <h1 class="portfolio-text">AudIT LiART</h1>
+          <div class="portfolio-layer">
+            <h4>AudIT LiART</h4>
+            <p>Get Your Audits</p>
+            <a href="https://audit-liart.vercel.app/"
+              ><i class="fa fa-external-link"></i
+            ></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img
+            src="https://png.pngtree.com/thumb_back/fh260/background/20230723/pngtree-high-quality-3d-illustration-of-waves-and-data-grid-on-blockchain-image_3779069.jpg"
+            alt="No"
+          />
+          <h1 class="portfolio-text">AgaramPromoters</h1>
+          <div class="portfolio-layer">
+            <h4>AgaramPromoters</h4>
+            <p>Wanna buy Land?</p>
+            <a href="https://www.agarampromoters.com/"
+              ><i class="fa fa-external-link"></i
+            ></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="https://wallpapercave.com/wp/zuiHX0K.jpg" alt="No" />
+          <h1 class="portfolio-text">Web Design</h1>
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>content</p>
+            <a href="#"><i class="fa fa-external-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section></section>
+    <section class="footer" id="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Follow us on<i class="fa fa-youtube-play"></i></h3>
+          <p>for more info on myself</p>
+          <div class="share">
+            <a
+              href="https://youtube.com/@jackorganisation?si=-1CPKt2egdeQ8oPh"
+              class="fa fa-youtube-play btn"
+            ></a>
+            <a
+              href="https://github.com/JithuMorrison"
+              class="fa fa-github btn"
+            ></a>
+            <a
+              href="https://www.instagram.com/jithumorrison/"
+              class="fa fa-instagram btn"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jithu-morrison-s/"
+              class="fa fa-linkedin btn"
+            ></a>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Concact Info</h3>
+          <a href="#" class="links"><i class="fa fa-clock-o"></i>Available</a>
+          <a href="#" class="links"
+            ><i class="fa fa-calendar"></i>Mon - Fri: 9 AM - 6 PM IST</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-envelope"></i>jithus2004@gmail.com</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-envelope"></i>jithumorrison2210564@ssn.edu.in</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-map-marker"></i>TN, India</a
+          >
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </body>
 </html>
