@@ -130,3 +130,85 @@ const typed  = new Typed('.multiple-text',{
     backDelay: 1000,
     loop: true
 });
+
+const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all scroll-reveal elements
+      document.querySelectorAll(".scroll-reveal").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Add staggered animation delays
+      document.querySelectorAll(".highlight").forEach((el, index) => {
+        el.style.animationDelay = `${0.2 * index}s`;
+      });
+
+      document.querySelectorAll(".project-card").forEach((el, index) => {
+        el.style.animationDelay = `${0.1 * index}s`;
+      });
+
+      // Smooth scrolling for any internal links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add loading animation when images are loading
+      document.querySelectorAll("img").forEach((img) => {
+        if (!img.complete) {
+          img.classList.add("loading-shimmer");
+          img.addEventListener("load", () => {
+            img.classList.remove("loading-shimmer");
+          });
+        }
+      });
+
+      // Add parallax effect to floating elements
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const parallaxElements =
+          document.querySelectorAll(".floating-elements");
+
+        parallaxElements.forEach((element) => {
+          const speed = 0.5;
+          element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+      });
+
+      // Add mouse movement effect to containers
+      document
+        .querySelectorAll(".jithucontainer-curve")
+        .forEach((container) => {
+          container.addEventListener("mousemove", (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 150;
+            const rotateY = (centerX - x) / 150;
+
+            container.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.02)`;
+          });
+
+          container.addEventListener("mouseleave", () => {
+            container.style.transform = "";
+          });
+        });

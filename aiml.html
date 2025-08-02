@@ -1,137 +1,477 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Jithu's web</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+      body {
+        min-height: 100vh;
+        background: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Photos-Universe.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .Infoofme {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: rgba(10, 14, 33, 0.9);
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(100, 200, 255, 0.15);
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Jithu's web</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="home.css" rel="stylesheet" type="text/css" />
-  <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet"/>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <style>
-    body {
-      min-height: 100vh;
-      background: url('https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Photos-Universe.jpg') no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
-</head>
+      .project-card {
+        background: linear-gradient(
+          145deg,
+          rgba(25, 30, 60, 0.9),
+          rgba(15, 20, 45, 0.95)
+        );
+        border-radius: 16px;
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        border: 1px solid rgba(100, 200, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
 
-<body>
-  <header class="header">
-    <a href="#" class="logo"> <i class="fa fa-shield"></i>AI & ML</a>
-    <nav class="navbar">
-      <a href="index.html"> Home </a>
-      <a href="#Infoaboutme"> About me </a>
-      <a href="#footer"> Contact us!! </a>
-    </nav>
-    <div class="icons">
-      <div class="fa fa-bars" id="menu-btn"></div>
-      <div class="fa fa-search" id="search-btn"></div>
-      <a href="login.html">
-      <div class="fa fa-user" id="login-btn"></div>
-      </a>
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #4fc3f7, #673ab7, #4fc3f7);
+        z-index: -1;
+        border-radius: 18px;
+        opacity: 0.6;
+        transition: opacity 0.4s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+      }
+
+      .project-card:hover::before {
+        opacity: 0.9;
+      }
+
+      .project-card h1 {
+        color: #4fc3f7;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 10px rgba(79, 195, 247, 0.4);
+        position: relative;
+        padding-bottom: 0.8rem;
+      }
+
+      .project-card h1::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #4fc3f7, transparent);
+        border-radius: 3px;
+      }
+
+      .project-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .project-text {
+        flex: 1;
+      }
+
+      .project-text p {
+        color: #e0e0e0;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .project-media {
+        flex: 0 0 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid rgba(100, 200, 255, 0.3);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease;
+      }
+
+      .project-image:hover {
+        transform: scale(1.03) rotate(1deg);
+      }
+
+      .project-links {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        background: rgba(79, 195, 247, 0.15);
+        border: 1px solid rgba(79, 195, 247, 0.3);
+        border-radius: 8px;
+        color: #4fc3f7;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .project-link:hover {
+        background: rgba(79, 195, 247, 0.3);
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(79, 195, 247, 0.2);
+      }
+
+      .project-link i {
+        font-size: 1.2rem;
+      }
+
+      .alternate-layout .project-content {
+        flex-direction: row-reverse;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 1024px) {
+        .project-content {
+          gap: 2rem;
+        }
+
+        .project-media {
+          flex: 0 0 40%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .project-content {
+          flex-direction: column;
+        }
+
+        .alternate-layout .project-content {
+          flex-direction: column;
+        }
+
+        .project-media {
+          width: 100%;
+          margin-top: 1.5rem;
+        }
+
+        .project-card h1 {
+          font-size: 1.6rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .heading {
+          font-size: 2.2rem;
+        }
+
+        .project-card {
+          padding: 1.8rem;
+        }
+
+        .project-links {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> <i class="fa fa-shield"></i>AI & ML</a>
+      <nav class="navbar">
+        <a href="index.html"> Home </a>
+        <a href="#Infoaboutme"> About me </a>
+        <a href="#footer"> Contact us!! </a>
+      </nav>
+      <div class="icons">
+        <div class="fa fa-bars" id="menu-btn"></div>
+        <div class="fa fa-search" id="search-btn"></div>
+        <a href="login.html">
+          <div class="fa fa-user" id="login-btn"></div>
+        </a>
+      </div>
+      <form class="search-form">
+        <input type="search" id="search-box" placeholder="Search here..." />
+        <label for="search-box" class="fa fa-search"></label>
+      </form>
+    </header>
+    <div class="header"></div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <li>Jithu <span>Web Developer</span></li>
+        <li><a href="#" target="_blank">Web dev</a></li>
+        <li><a href="#" target="_blank">App dev</a></li>
+        <li><a href="#" target="_blank">Game developer</a></li>
+        <li><a href="#" target="_blank">YouTuber</a></li>
+        <li><a href="#" target="_blank">Student</a></li>
+      </ul>
     </div>
-    <form class="search-form">
-      <input type="search" id="search-box" placeholder="Search here...">
-      <label for="search-box" class="fa fa-search"></label>
-    </form>   
-  </header>
-  <div class="header"></div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-      <li>Jithu <span>Web Developer</span></li>
-      <li><a href="#" target="_blank">Web dev</a></li>
-      <li><a href="#" target="_blank">App dev</a></li>
-      <li><a href="#" target="_blank">Game developer</a></li>
-      <li><a href="#" target="_blank">YouTuber</a></li>
-      <li><a href="#" target="_blank">Student</a></li>
-    </ul>
-  </div>
-  <section></section>
-  <section class="Infoaboutme" id="Infoaboutme">
-    <h1 class="heading">AI & ML<span>Projects</span></h1>
-  <section class="Infoofme">
-    <div class="jithucontainer1">
-      <h1>Pixel Phantoms at Touché: Ideology and Power Identification in Parliamentary Debates using Linear SVC </h1>
-      <div class="aboutbox">
-        <p>This study titled "Pixel Phantoms at Touché: Ideology and Power Identification in Parliamentary Debates using Linear SVC" delves into the nuanced analysis of parliamentary discourse by focusing on two central tasks: identifying the political ideology of speakers and categorizing their party affiliation as either governing or opposition. The research leverages a range of machine learning models, including Linear SVC, Logistic Regression, and DistilBERT, to address these classification challenges. By employing a multilingual corpus sourced from ParlaMint, the study assesses the performance of these models using F1 scores.<br><br> The findings reveal that Linear SVC outperforms the other models, demonstrating its effectiveness in managing and interpreting complex political texts. This research underscores the value of integrating both traditional and advanced machine learning methods to enhance the analysis of political discourse.</p>
-        <div class="images">
-          <a href="#">Github link? Not yet done</a>
-            <img src="">
-            <img src="">
-
+    <section></section>
+    <section class="Infoaboutme" id="Infoaboutme">
+      <h1 class="heading" style="margin-bottom: -50px; margin-top: 20px">
+        AI & ML<span>Projects</span>
+      </h1>
+      <section class="Infoofme">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h1>
+            Pixel Phantoms at Touché: Ideology and Power Identification in
+            Parliamentary Debates
+          </h1>
+          <div class="project-content">
+            <div class="project-text">
+              <p>
+                This research delves into the nuanced analysis of parliamentary
+                discourse by focusing on two central tasks: identifying the
+                political ideology of speakers and categorizing their party
+                affiliation. We leveraged machine learning models including
+                Linear SVC, Logistic Regression, and DistilBERT to address these
+                classification challenges using a multilingual corpus from
+                ParlaMint.
+              </p>
+              <p>
+                Our findings reveal that Linear SVC outperforms other models,
+                demonstrating effectiveness in interpreting complex political
+                texts. This research underscores the value of integrating both
+                traditional and advanced machine learning methods for political
+                discourse analysis.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fas fa-file-pdf"></i> Research Paper
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i> GitHub Repo
+                </a>
+              </div>
+            </div>
+            <div class="project-media">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/4fc3f7?text=Parliament+Analysis"
+                alt="Parliament Analysis"
+                class="project-image"
+              />
+              <img
+                src="https://via.placeholder.com/600x300/1a1a2e/4fc3f7?text=Model+Performance"
+                alt="Model Performance"
+                class="project-image"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="jithucontainer1">
-      <h1>A Transformer Based Approach for Text-to-Picto Generation</h1>
-      <div class="aboutbox2">
-        <div class="images">
-            <img src="">
-            <img src="">
-            <a href="#">Github link? Not yet done</a>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h1>Transformer Based Text-to-Picto Generation</h1>
+          <div class="project-content alternate-layout">
+            <div class="project-text">
+              <p>
+                This research focuses on developing a system that translates
+                French text into corresponding pictogram representations.
+                Utilizing the Google-T5 transformer model, we fine-tuned the
+                model on a custom French text dataset to accurately generate
+                pictogram terms across multiple epochs.
+              </p>
+              <p>
+                The system achieved notable results: PictoER score of 13.9, BLEU
+                score of 74.3, and METEOR score of 87.0. This approach
+                highlights the effectiveness of transformer-based models in
+                bridging text and visual representation for accessibility
+                applications.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fas fa-file-pdf"></i> Research Paper
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i> GitHub Repo
+                </a>
+              </div>
+            </div>
+            <div class="project-media">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/4fc3f7?text=Text+to+Picto"
+                alt="Text to Picto"
+                class="project-image"
+              />
+              <img
+                src="https://via.placeholder.com/600x300/1a1a2e/4fc3f7?text=Model+Architecture"
+                alt="Model Architecture"
+                class="project-image"
+              />
+            </div>
+          </div>
         </div>
-        <p>This research work titled "A Transformer Based Approach for Text-to-Picto Generation" focuses on developing a system that translates French text into corresponding pictogram representations. Utilizing the Google-T5 transformer model, the study fine-tunes the model on a custom French text dataset to accurately generate pictogram terms. The model underwent extensive fine-tuning across multiple epochs to enhance its translation capabilities.<br><br> Performance metrics, including PictoER score, BLEU score, and METEOR score, were employed to evaluate the system, with the model achieving notable results: a PictoER score of 13.9, a BLEU score of 74.3, and a METEOR score of 87.0. This approach highlights the effectiveness of transformer-based models in bridging text and visual representation. </p>
-      </div>
-    </div>
-    <div class="jithucontainer1">
-      <h1>Disaster prediction Model</h1>
-      <div class="aboutbox">
 
-        <p>We developed a model designed to address the challenge of identifying disaster-related tweets on Twitter. Given the critical role Twitter plays in real-time communication during emergencies, with many individuals using it to report and discuss observed disasters, it has become increasingly important for agencies like disaster relief organizations and news agencies to monitor these tweets effectively.<br><br>
-
-          Our model focuses on distinguishing tweets that genuinely announce or discuss disasters from those that do not. It leverages advanced machine learning techniques to analyze tweet content and context, applying various algorithms to classify tweets accurately. By training the model on a diverse dataset of labeled tweets, the system learns to recognize patterns and keywords indicative of disaster-related information.<br><br>
-
-          The model achieved an accuracy of 0.783, demonstrating its effectiveness in identifying relevant tweets while minimizing false positives and false negatives. This approach ensures that the model can reliably filter out tweets crucial for emergency response efforts, enhancing the efficiency and responsiveness of disaster monitoring systems.</p>
-        <div class="images">
-            <img src="">
-            <img src="">
-            <a href="#">Github link? Not yet done</a>
+        <!-- Project 3 -->
+        <div class="project-card">
+          <h1>Disaster Tweet Prediction Model</h1>
+          <div class="project-content">
+            <div class="project-text">
+              <p>
+                We developed a model to identify disaster-related tweets on
+                Twitter, crucial for emergency response organizations. The model
+                distinguishes genuine disaster announcements from regular tweets
+                using advanced NLP techniques and machine learning algorithms
+                trained on a diverse dataset.
+              </p>
+              <p>
+                The system achieved an accuracy of 0.783, effectively minimizing
+                false positives/negatives. This approach enhances the efficiency
+                of disaster monitoring systems by reliably filtering crucial
+                information from real-time social media data.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fas fa-file-pdf"></i> Research Paper
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i> GitHub Repo
+                </a>
+              </div>
+            </div>
+            <div class="project-media">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/4fc3f7?text=Disaster+Tweets"
+                alt="Disaster Tweets"
+                class="project-image"
+              />
+              <img
+                src="https://via.placeholder.com/600x300/1a1a2e/4fc3f7?text=Performance+Metrics"
+                alt="Performance Metrics"
+                class="project-image"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="jithucontainer1">
-      <h1>Other Works </h1>
-      <div class="aboutbox3">
-        <p>Made two Models for Trauma detection App, one to predict if a person has trauma or not and another to predict the trauma type of a person. </p>
-      </div>
-    </div>
-  </section>
+
+        <!-- Other Works -->
+        <div class="project-card">
+          <h1>Other Notable Works</h1>
+          <div class="project-content">
+            <div class="project-text">
+              <p>
+                Developed two models for Trauma Detection App: one to predict if
+                a person has trauma based on their conversations, and another to
+                classify the type of trauma. These models utilize advanced NLP
+                techniques and psychological markers to provide accurate
+                assessments.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fas fa-file-pdf"></i> Research Paper
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i> GitHub Repo
+                </a>
+              </div>
+            </div>
+            <div class="project-media">
+              <img
+                src="https://via.placeholder.com/600x400/1a1a2e/4fc3f7?text=Trauma+Detection"
+                alt="Trauma Detection"
+                class="project-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
-  <section></section>
-  <section class="footer" id="footer">
-    <div class="box-container">
-      <div class="box">
-        <h3>Follow us on<i class="fa fa-youtube-play"></i></h3>
-        <p>for info on sentiment analysis</p>
-        <div class="share">
-          <a href="https://youtube.com/@jackorganisation?si=-1CPKt2egdeQ8oPh" class="fa fa-youtube-play btn"></a>
-          <a href="https://github.com/JithuMorrison" class="fa fa-github btn"></a>
-          <a href="https://www.instagram.com/jithumorrison/" class="fa fa-instagram btn"></a>
-          <a href="https://www.linkedin.com/in/jithu-morrison-s/" class="fa fa-linkedin btn"></a>
+    <section></section>
+    <section class="footer" id="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Follow us on<i class="fa fa-youtube-play"></i></h3>
+          <p>for info on sentiment analysis</p>
+          <div class="share">
+            <a
+              href="https://youtube.com/@jackorganisation?si=-1CPKt2egdeQ8oPh"
+              class="fa fa-youtube-play btn"
+            ></a>
+            <a
+              href="https://github.com/JithuMorrison"
+              class="fa fa-github btn"
+            ></a>
+            <a
+              href="https://www.instagram.com/jithumorrison/"
+              class="fa fa-instagram btn"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jithu-morrison-s/"
+              class="fa fa-linkedin btn"
+            ></a>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Concact Info</h3>
+          <a href="#" class="links"
+            ><i class="fa fa-phone"></i>+91 8754823987</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-envelope"></i>jithus2004@gmail.com</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-envelope"></i>jithumorrison2210564@ssn.edu.in</a
+          >
+          <a href="#" class="links"
+            ><i class="fa fa-map-marker"></i>TN, India</a
+          >
         </div>
       </div>
-      <div class="box">
-        <h3>Concact Info</h3>
-        <a href="#" class="links"><i class="fa fa-phone"></i>+91 8754823987</a>
-        <a href="#" class="links"><i class="fa fa-envelope"></i>jithus2004@gmail.com</a>
-        <a href="#" class="links"><i class="fa fa-envelope"></i>jithumorrison2210564@ssn.edu.in</a>
-        <a href="#" class="links"><i class="fa fa-map-marker"></i>TN, India</a>
-      </div>
-    </div>
-  </section>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-</body>
-
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </body>
 </html>
