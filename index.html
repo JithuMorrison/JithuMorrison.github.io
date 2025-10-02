@@ -1503,6 +1503,53 @@
       </div>
     </section>
 
+    <style>
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      #marquee {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        width: max-content;
+      }
+
+      #marquee:hover {
+        animation-play-state: paused;
+      }
+
+      .marquee-item {
+        flex-shrink: 0;
+        width: 120px;
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .marquee-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .marquee-text {
+        font-size: 0.9rem;
+        text-align: center;
+        color: #e2e8f0;
+      }
+    </style>
+
     <section
       style="
         background: rgba(30, 41, 59, 0.7);
@@ -1511,597 +1558,115 @@
         margin-bottom: 2rem;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         width: 80%;
         margin: 40px auto;
       "
     >
       <h2
         style="
-          font-size: 1.8rem;
-          margin-bottom: 1.5rem;
           color: #e2e8f0;
+          font-size: 1.8rem;
           display: flex;
           align-items: center;
           gap: 10px;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          margin-bottom: 1.5rem;
+          margin-top: -40px;
         "
       >
-        <i
-          style="
-            color: #3b82f6;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          >🔮</i
-        >
-        Technologies I Know
+        🔮 Technologies I Know
       </h2>
-      <div
-        style="
-          overflow: hidden;
-          padding: 1.5rem 0;
-          position: relative;
-          margin: 0;
-          box-sizing: border-box;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        "
-      >
-        <div
-          style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100px;
-            height: 100%;
-            z-index: 2;
-            background: linear-gradient(
-              to right,
-              rgba(30, 41, 59, 0.7),
-              transparent
-            );
-            content: '';
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-        ></div>
-        <div
-          style="
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100%;
-            z-index: 2;
-            background: linear-gradient(
-              to left,
-              rgba(30, 41, 59, 0.7),
-              transparent
-            );
-            content: '';
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-        ></div>
-        <div
-          id="marquee"
-          style="
-            display: flex;
-            animation: scroll 30s linear infinite;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.animationPlayState='paused';"
-          onmouseout="this.style.animationPlayState='running';"
-        >
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              📦
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              Docker
-            </div>
+
+      <div style="overflow: hidden; position: relative">
+        <div id="marquee">
+          <!-- First copy -->
+          <div class="marquee-item">
+            <div class="marquee-icon">📦</div>
+            <div class="marquee-text">Docker</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              ☁️
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              AWS
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">☁️</div>
+            <div class="marquee-text">AWS</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              📱
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              React Native
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">📱</div>
+            <div class="marquee-text">React Native</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              📊
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              Data Visualization
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">📊</div>
+            <div class="marquee-text">Data Viz</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              🔧
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              Git
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">🔧</div>
+            <div class="marquee-text">Git</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              🔄
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              CI/CD
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">🔄</div>
+            <div class="marquee-text">CI/CD</div>
           </div>
-          <!-- Duplicate items for seamless looping -->
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              🌐
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              HTML5
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">🌐</div>
+            <div class="marquee-text">HTML5</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              🎨
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              CSS3
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">🎨</div>
+            <div class="marquee-text">CSS3</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              ⚡
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              JavaScript
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">⚡</div>
+            <div class="marquee-text">JavaScript</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              📱
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              React
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">📱</div>
+            <div class="marquee-text">React</div>
           </div>
-          <div
-            style="
-              flex-shrink: 0;
-              width: 120px;
-              margin: 0 1rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            <div
-              style="
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin-bottom: 0.5rem;
-              "
-            >
-              📘
-            </div>
-            <div
-              style="
-                font-size: 0.9rem;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              "
-            >
-              TypeScript
-            </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">📘</div>
+            <div class="marquee-text">TypeScript</div>
+          </div>
+
+          <!-- Duplicate copy for seamless loop -->
+          <div class="marquee-item">
+            <div class="marquee-icon">📦</div>
+            <div class="marquee-text">Docker</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">☁️</div>
+            <div class="marquee-text">AWS</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">📱</div>
+            <div class="marquee-text">React Native</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">📊</div>
+            <div class="marquee-text">Data Viz</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">🔧</div>
+            <div class="marquee-text">Git</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">🔄</div>
+            <div class="marquee-text">CI/CD</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">🌐</div>
+            <div class="marquee-text">HTML5</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">🎨</div>
+            <div class="marquee-text">CSS3</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">⚡</div>
+            <div class="marquee-text">JavaScript</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">📱</div>
+            <div class="marquee-text">React</div>
+          </div>
+          <div class="marquee-item">
+            <div class="marquee-icon">📘</div>
+            <div class="marquee-text">TypeScript</div>
           </div>
         </div>
       </div>
