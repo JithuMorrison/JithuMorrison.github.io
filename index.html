@@ -281,6 +281,7 @@
               </div>
 
               <div class="project-card scroll-reveal">
+                <span class="highlight-icon">💻</span>
                 <h3>Sentiment Analysis on Social Media Presence</h3>
                 <p class="project-date">12/2023</p>
                 <p>
@@ -992,517 +993,125 @@
         </div>
       </div>
     </section>
-    <section
-      style="
+    <style>
+      .tech-section {
         background: rgba(30, 41, 59, 0.7);
         border-radius: 16px;
         padding: 2rem;
-        margin-bottom: 2rem;
+        margin: 40px auto 2rem;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         width: 80%;
-        margin: 40px auto;
-      "
-    >
-      <h2
-        style="
-          font-size: 1.8rem;
-          margin-bottom: 1.5rem;
-          color: #e2e8f0;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          margin-bottom: 1.5rem;
-        "
-      >
-        <i
-          style="
-            color: #3b82f6;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          >🚀</i
-        >
-        Tech Stacks I've Worked On
-      </h2>
-      <div
-        style="
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-          gap: 1.5rem;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        "
-      >
-        <div
-          style="
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.05)';"
-        >
-          <div
-            style="
-              width: 60px;
-              height: 60px;
-              margin: 0 auto 1rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2.5rem;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            🌐
-          </div>
-          <div
-            style="
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              margin-bottom: 0.5rem;
-            "
-          >
-            HTML/CSS
-          </div>
-          <div
-            style="
-              font-size: 0.85rem;
-              color: #94a3b8;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            Expert
-          </div>
+        box-sizing: border-box;
+      }
+
+      .tech-title {
+        font-size: 1.8rem;
+        color: #e2e8f0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: -30px;
+      }
+
+      .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .tech-card {
+        background: rgba(15, 23, 42, 0.8);
+        border-radius: 12px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+        cursor: default;
+      }
+
+      .tech-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+        border-color: rgba(59, 130, 246, 0.6);
+      }
+
+      .tech-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+      }
+
+      .tech-name {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #f1f5f9;
+      }
+
+      .tech-level {
+        font-size: 0.85rem;
+        color: #94a3b8;
+      }
+    </style>
+
+    <section class="tech-section">
+      <h2 class="tech-title">🚀 Tech Stacks I've Worked On</h2>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">🌐</div>
+          <div class="tech-name">HTML/CSS</div>
+          <div class="tech-level">Expert</div>
         </div>
-        <div
-          style="
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.05)';"
-        >
-          <div
-            style="
-              width: 60px;
-              height: 60px;
-              margin: 0 auto 1rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2.5rem;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            ⚡
-          </div>
-          <div
-            style="
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              margin-bottom: 0.5rem;
-            "
-          >
-            JavaScript
-          </div>
-          <div
-            style="
-              font-size: 0.85rem;
-              color: #94a3b8;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            Advanced
-          </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">⚡</div>
+          <div class="tech-name">JavaScript</div>
+          <div class="tech-level">Advanced</div>
         </div>
-        <div
-          style="
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.05)';"
-        >
-          <div
-            style="
-              width: 60px;
-              height: 60px;
-              margin: 0 auto 1rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2.5rem;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            📱
-          </div>
-          <div
-            style="
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              margin-bottom: 0.5rem;
-            "
-          >
-            React
-          </div>
-          <div
-            style="
-              font-size: 0.85rem;
-              color: #94a3b8;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            Advanced
-          </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">📱</div>
+          <div class="tech-name">React</div>
+          <div class="tech-level">Advanced</div>
         </div>
-        <div
-          style="
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.05)';"
-        >
-          <div
-            style="
-              width: 60px;
-              height: 60px;
-              margin: 0 auto 1rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2.5rem;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            🟢
-          </div>
-          <div
-            style="
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              margin-bottom: 0.5rem;
-            "
-          >
-            Node.js
-          </div>
-          <div
-            style="
-              font-size: 0.85rem;
-              color: #94a3b8;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            Intermediate
-          </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🟢</div>
+          <div class="tech-name">Node.js</div>
+          <div class="tech-level">Intermediate</div>
         </div>
-        <div
-          style="
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.05)';"
-        >
-          <div
-            style="
-              width: 60px;
-              height: 60px;
-              margin: 0 auto 1rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2.5rem;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            🗄️
-          </div>
-          <div
-            style="
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              margin-bottom: 0.5rem;
-            "
-          >
-            MongoDB
-          </div>
-          <div
-            style="
-              font-size: 0.85rem;
-              color: #94a3b8;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            Intermediate
-          </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🗄️</div>
+          <div class="tech-name">MongoDB</div>
+          <div class="tech-level">Intermediate</div>
         </div>
-        <div
-          style="
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.05)';"
-        >
-          <div
-            style="
-              width: 60px;
-              height: 60px;
-              margin: 0 auto 1rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2.5rem;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            🐘
-          </div>
-          <div
-            style="
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              margin-bottom: 0.5rem;
-            "
-          >
-            PostgreSQL
-          </div>
-          <div
-            style="
-              font-size: 0.85rem;
-              color: #94a3b8;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            Intermediate
-          </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🐘</div>
+          <div class="tech-name">PostgreSQL</div>
+          <div class="tech-level">Intermediate</div>
         </div>
-        <div
-          style="
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.05)';"
-        >
-          <div
-            style="
-              width: 60px;
-              height: 60px;
-              margin: 0 auto 1rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2.5rem;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            📦
-          </div>
-          <div
-            style="
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              margin-bottom: 0.5rem;
-            "
-          >
-            Docker
-          </div>
-          <div
-            style="
-              font-size: 0.85rem;
-              color: #94a3b8;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            Beginner
-          </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">📦</div>
+          <div class="tech-name">Docker</div>
+          <div class="tech-level">Beginner</div>
         </div>
-        <div
-          style="
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 12px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.05)';"
-        >
-          <div
-            style="
-              width: 60px;
-              height: 60px;
-              margin: 0 auto 1rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2.5rem;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            ☁️
-          </div>
-          <div
-            style="
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              margin-bottom: 0.5rem;
-            "
-          >
-            AWS
-          </div>
-          <div
-            style="
-              font-size: 0.85rem;
-              color: #94a3b8;
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            "
-          >
-            Beginner
-          </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">☁️</div>
+          <div class="tech-name">AWS</div>
+          <div class="tech-level">Beginner</div>
         </div>
       </div>
     </section>
-
     <style>
       @keyframes scroll {
         from {
