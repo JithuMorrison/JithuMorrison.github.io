@@ -263,8 +263,13 @@
           <h2 class="section-title">My Projects</h2>
           <div class="aboutbox1-curve">
             <div>
-              <img src="jithu1.jpg" style="margin-right: 20px" />
-              <img src="jithu1.jpg" />
+              <img
+                src="https://sapizon.com/wp-content/uploads/2020/04/vr_ar_usa.jpg"
+                style="margin-right: 20px"
+              />
+              <img
+                src="https://cdn.pixabay.com/photo/2024/05/15/20/57/developer-8764523_1280.jpg"
+              />
             </div>
             <div class="projects-content">
               <div class="project-card scroll-reveal">
@@ -281,7 +286,7 @@
               </div>
 
               <div class="project-card scroll-reveal">
-                <span class="highlight-icon">💻</span>
+                <span class="highlight-icon">💭</span>
                 <h3>Sentiment Analysis on Social Media Presence</h3>
                 <p class="project-date">12/2023</p>
                 <p>
@@ -291,6 +296,7 @@
               </div>
 
               <div class="project-card scroll-reveal">
+                <span class="highlight-icon">🥗</span>
                 <h3>Recipe App</h3>
                 <p class="project-date">03/2024</p>
                 <p>
@@ -300,6 +306,7 @@
               </div>
 
               <div class="project-card scroll-reveal">
+                <span class="highlight-icon">❤️‍🩹</span>
                 <h3>Trauma Detection App</h3>
                 <p class="project-date">03/2024 - Present</p>
                 <p>
@@ -309,6 +316,7 @@
               </div>
 
               <div class="project-card scroll-reveal">
+                <span class="highlight-icon">🎓</span>
                 <h3>EduTrack App</h3>
                 <p class="project-date">06/2024 - 06/2024</p>
                 <p>
@@ -1022,19 +1030,24 @@
       }
 
       .tech-card {
-        background: rgba(15, 23, 42, 0.8);
         border-radius: 12px;
         padding: 1.5rem 1rem;
         text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.05);
         transition: all 0.3s ease;
         cursor: default;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
 
       .tech-card:hover {
         transform: translateY(-6px) scale(1.03);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
-        border-color: rgba(59, 130, 246, 0.6);
+        background: linear-gradient(
+          145deg,
+          rgba(15, 23, 42, 0.7),
+          rgba(30, 41, 59, 0.5)
+        );
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4),
+          0 0 0 1px rgba(59, 130, 246, 0.2);
+        border-color: rgba(59, 130, 246, 0.3);
       }
 
       .tech-icon {
