@@ -1001,129 +1001,913 @@
         </div>
       </div>
     </section>
-    <style>
-      .tech-section {
-        background: rgba(30, 41, 59, 0.7);
-        border-radius: 16px;
-        padding: 2rem;
-        margin: 40px auto 2rem;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        width: 80%;
-        box-sizing: border-box;
-      }
+    <section
+      class="tech-section"
+      style="padding: 20px 20px; background: transparent; position: relative"
+    >
+      <!-- Animated gradient orbs in background -->
+      <div
+        style="
+          position: absolute;
+          top: 20%;
+          left: 10%;
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(
+            circle,
+            rgba(102, 126, 234, 0.15) 0%,
+            transparent 70%
+          );
+          border-radius: 50%;
+          filter: blur(60px);
+          animation: float 8s ease-in-out infinite;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 10%;
+          right: 15%;
+          width: 350px;
+          height: 350px;
+          background: radial-gradient(
+            circle,
+            rgba(245, 87, 108, 0.15) 0%,
+            transparent 70%
+          );
+          border-radius: 50%;
+          filter: blur(60px);
+          animation: float 10s ease-in-out infinite reverse;
+        "
+      ></div>
 
-      .tech-title {
-        font-size: 1.8rem;
-        color: #e2e8f0;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: -30px;
-      }
-
-      .tech-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .tech-card {
-        border-radius: 12px;
-        padding: 1.5rem 1rem;
-        text-align: center;
-        transition: all 0.3s ease;
-        cursor: default;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-
-      .tech-card:hover {
-        transform: translateY(-6px) scale(1.03);
-        background: linear-gradient(
-          145deg,
-          rgba(15, 23, 42, 0.7),
-          rgba(30, 41, 59, 0.5)
-        );
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4),
-          0 0 0 1px rgba(59, 130, 246, 0.2);
-        border-color: rgba(59, 130, 246, 0.3);
-      }
-
-      .tech-icon {
-        width: 60px;
-        height: 60px;
-        margin: 0 auto 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.5rem;
-      }
-
-      .tech-name {
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        color: #f1f5f9;
-      }
-
-      .tech-level {
-        font-size: 0.85rem;
-        color: #94a3b8;
-      }
-    </style>
-
-    <section class="tech-section">
-      <h2 class="tech-title">🚀 Tech Stacks I've Worked On</h2>
-
-      <div class="tech-grid">
-        <div class="tech-card">
-          <div class="tech-icon">🌐</div>
-          <div class="tech-name">HTML/CSS</div>
-          <div class="tech-level">Expert</div>
-        </div>
-
-        <div class="tech-card">
-          <div class="tech-icon">⚡</div>
-          <div class="tech-name">JavaScript</div>
-          <div class="tech-level">Advanced</div>
-        </div>
-
-        <div class="tech-card">
-          <div class="tech-icon">📱</div>
-          <div class="tech-name">React</div>
-          <div class="tech-level">Advanced</div>
-        </div>
-
-        <div class="tech-card">
-          <div class="tech-icon">🟢</div>
-          <div class="tech-name">Node.js</div>
-          <div class="tech-level">Intermediate</div>
-        </div>
-
-        <div class="tech-card">
-          <div class="tech-icon">🗄️</div>
-          <div class="tech-name">MongoDB</div>
-          <div class="tech-level">Intermediate</div>
-        </div>
-
-        <div class="tech-card">
-          <div class="tech-icon">🐘</div>
-          <div class="tech-name">PostgreSQL</div>
-          <div class="tech-level">Intermediate</div>
-        </div>
-
-        <div class="tech-card">
-          <div class="tech-icon">📦</div>
-          <div class="tech-name">Docker</div>
-          <div class="tech-level">Beginner</div>
-        </div>
-
-        <div class="tech-card">
-          <div class="tech-icon">☁️</div>
-          <div class="tech-name">AWS</div>
-          <div class="tech-level">Beginner</div>
+      <div
+        style="
+          text-align: center;
+          margin-bottom: 20px;
+          position: relative;
+          z-index: 1;
+        "
+      >
+        <div
+          style="
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            margin-bottom: 20px;
+          "
+        >
+          <span
+            style="
+              font-size: 0.85rem;
+              color: rgba(255, 255, 255, 0.7);
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              font-weight: 600;
+            "
+            >Technology Stack</span
+          >
         </div>
       </div>
+
+      <div
+        class="tech-grid"
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+          gap: 16px;
+          max-width: 1000px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+        "
+      >
+        <div
+          class="tech-card"
+          style="
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          "
+          onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.background='rgba(102, 126, 234, 0.1)'; this.style.borderColor='rgba(102, 126, 234, 0.5)'; this.style.boxShadow='0 20px 60px rgba(102, 126, 234, 0.3), inset 0 1px 0 rgba(255,255,255,0.1)'; this.querySelector('.shine').style.transform='translateX(200%)';"
+          onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.03)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.querySelector('.shine').style.transform='translateX(-200%)';"
+        >
+          <div
+            class="shine"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              transform: translateX(-200%);
+              transition: transform 0.6s;
+            "
+          ></div>
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              margin: 0 auto 16px;
+              background: rgba(102, 126, 234, 0.1);
+              border: 2px solid rgba(102, 126, 234, 0.3);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s;
+            "
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML/CSS"
+              style="width: 36px; height: 36px; object-fit: contain"
+            />
+          </div>
+          <div
+            class="tech-name"
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            HTML/CSS
+          </div>
+          <div
+            style="
+              height: 2px;
+              width: 40px;
+              margin: 0 auto 10px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #667eea,
+                transparent
+              );
+              border-radius: 2px;
+            "
+          ></div>
+          <div
+            class="tech-level"
+            style="
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba(102, 126, 234, 0.15);
+              border: 1px solid rgba(102, 126, 234, 0.4);
+              border-radius: 8px;
+              font-size: 0.7rem;
+              color: #667eea;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+          >
+            Expert
+          </div>
+        </div>
+
+        <div
+          class="tech-card"
+          style="
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          "
+          onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.background='rgba(245, 87, 108, 0.1)'; this.style.borderColor='rgba(245, 87, 108, 0.5)'; this.style.boxShadow='0 20px 60px rgba(245, 87, 108, 0.3), inset 0 1px 0 rgba(255,255,255,0.1)'; this.querySelector('.shine').style.transform='translateX(200%)';"
+          onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.03)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.querySelector('.shine').style.transform='translateX(-200%)';"
+        >
+          <div
+            class="shine"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              transform: translateX(-200%);
+              transition: transform 0.6s;
+            "
+          ></div>
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              margin: 0 auto 16px;
+              background: rgba(245, 87, 108, 0.1);
+              border: 2px solid rgba(245, 87, 108, 0.3);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s;
+            "
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              style="width: 36px; height: 36px; object-fit: contain"
+            />
+          </div>
+          <div
+            class="tech-name"
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            JavaScript
+          </div>
+          <div
+            style="
+              height: 2px;
+              width: 40px;
+              margin: 0 auto 10px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #f5576c,
+                transparent
+              );
+              border-radius: 2px;
+            "
+          ></div>
+          <div
+            class="tech-level"
+            style="
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba(245, 87, 108, 0.15);
+              border: 1px solid rgba(245, 87, 108, 0.4);
+              border-radius: 8px;
+              font-size: 0.7rem;
+              color: #f5576c;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+          >
+            Advanced
+          </div>
+        </div>
+
+        <div
+          class="tech-card"
+          style="
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          "
+          onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.background='rgba(245, 87, 108, 0.1)'; this.style.borderColor='rgba(245, 87, 108, 0.5)'; this.style.boxShadow='0 20px 60px rgba(245, 87, 108, 0.3), inset 0 1px 0 rgba(255,255,255,0.1)'; this.querySelector('.shine').style.transform='translateX(200%)';"
+          onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.03)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.querySelector('.shine').style.transform='translateX(-200%)';"
+        >
+          <div
+            class="shine"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              transform: translateX(-200%);
+              transition: transform 0.6s;
+            "
+          ></div>
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              margin: 0 auto 16px;
+              background: rgba(245, 87, 108, 0.1);
+              border: 2px solid rgba(245, 87, 108, 0.3);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s;
+            "
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React"
+              style="width: 36px; height: 36px; object-fit: contain"
+            />
+          </div>
+          <div
+            class="tech-name"
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            React
+          </div>
+          <div
+            style="
+              height: 2px;
+              width: 40px;
+              margin: 0 auto 10px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #f5576c,
+                transparent
+              );
+              border-radius: 2px;
+            "
+          ></div>
+          <div
+            class="tech-level"
+            style="
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba(245, 87, 108, 0.15);
+              border: 1px solid rgba(245, 87, 108, 0.4);
+              border-radius: 8px;
+              font-size: 0.7rem;
+              color: #f5576c;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+          >
+            Advanced
+          </div>
+        </div>
+
+        <div
+          class="tech-card"
+          style="
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          "
+          onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.background='rgba(79, 172, 254, 0.1)'; this.style.borderColor='rgba(79, 172, 254, 0.5)'; this.style.boxShadow='0 20px 60px rgba(79, 172, 254, 0.3), inset 0 1px 0 rgba(255,255,255,0.1)'; this.querySelector('.shine').style.transform='translateX(200%)';"
+          onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.03)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.querySelector('.shine').style.transform='translateX(-200%)';"
+        >
+          <div
+            class="shine"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              transform: translateX(-200%);
+              transition: transform 0.6s;
+            "
+          ></div>
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              margin: 0 auto 16px;
+              background: rgba(79, 172, 254, 0.1);
+              border: 2px solid rgba(79, 172, 254, 0.3);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s;
+            "
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              style="width: 36px; height: 36px; object-fit: contain"
+            />
+          </div>
+          <div
+            class="tech-name"
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            Node.js
+          </div>
+          <div
+            style="
+              height: 2px;
+              width: 40px;
+              margin: 0 auto 10px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #4facfe,
+                transparent
+              );
+              border-radius: 2px;
+            "
+          ></div>
+          <div
+            class="tech-level"
+            style="
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba(79, 172, 254, 0.15);
+              border: 1px solid rgba(79, 172, 254, 0.4);
+              border-radius: 8px;
+              font-size: 0.7rem;
+              color: #4facfe;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+          >
+            Intermediate
+          </div>
+        </div>
+
+        <div
+          class="tech-card"
+          style="
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          "
+          onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.background='rgba(79, 172, 254, 0.1)'; this.style.borderColor='rgba(79, 172, 254, 0.5)'; this.style.boxShadow='0 20px 60px rgba(79, 172, 254, 0.3), inset 0 1px 0 rgba(255,255,255,0.1)'; this.querySelector('.shine').style.transform='translateX(200%)';"
+          onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.03)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.querySelector('.shine').style.transform='translateX(-200%)';"
+        >
+          <div
+            class="shine"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              transform: translateX(-200%);
+              transition: transform 0.6s;
+            "
+          ></div>
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              margin: 0 auto 16px;
+              background: rgba(79, 172, 254, 0.1);
+              border: 2px solid rgba(79, 172, 254, 0.3);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s;
+            "
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB"
+              style="width: 36px; height: 36px; object-fit: contain"
+            />
+          </div>
+          <div
+            class="tech-name"
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            MongoDB
+          </div>
+          <div
+            style="
+              height: 2px;
+              width: 40px;
+              margin: 0 auto 10px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #4facfe,
+                transparent
+              );
+              border-radius: 2px;
+            "
+          ></div>
+          <div
+            class="tech-level"
+            style="
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba(79, 172, 254, 0.15);
+              border: 1px solid rgba(79, 172, 254, 0.4);
+              border-radius: 8px;
+              font-size: 0.7rem;
+              color: #4facfe;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+          >
+            Intermediate
+          </div>
+        </div>
+
+        <div
+          class="tech-card"
+          style="
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          "
+          onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.background='rgba(79, 172, 254, 0.1)'; this.style.borderColor='rgba(79, 172, 254, 0.5)'; this.style.boxShadow='0 20px 60px rgba(79, 172, 254, 0.3), inset 0 1px 0 rgba(255,255,255,0.1)'; this.querySelector('.shine').style.transform='translateX(200%)';"
+          onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.03)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.querySelector('.shine').style.transform='translateX(-200%)';"
+        >
+          <div
+            class="shine"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              transform: translateX(-200%);
+              transition: transform 0.6s;
+            "
+          ></div>
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              margin: 0 auto 16px;
+              background: rgba(79, 172, 254, 0.1);
+              border: 2px solid rgba(79, 172, 254, 0.3);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s;
+            "
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL"
+              style="width: 36px; height: 36px; object-fit: contain"
+            />
+          </div>
+          <div
+            class="tech-name"
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            PostgreSQL
+          </div>
+          <div
+            style="
+              height: 2px;
+              width: 40px;
+              margin: 0 auto 10px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #4facfe,
+                transparent
+              );
+              border-radius: 2px;
+            "
+          ></div>
+          <div
+            class="tech-level"
+            style="
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba(79, 172, 254, 0.15);
+              border: 1px solid rgba(79, 172, 254, 0.4);
+              border-radius: 8px;
+              font-size: 0.7rem;
+              color: #4facfe;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+          >
+            Intermediate
+          </div>
+        </div>
+
+        <div
+          class="tech-card"
+          style="
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          "
+          onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.background='rgba(67, 233, 123, 0.1)'; this.style.borderColor='rgba(67, 233, 123, 0.5)'; this.style.boxShadow='0 20px 60px rgba(67, 233, 123, 0.3), inset 0 1px 0 rgba(255,255,255,0.1)'; this.querySelector('.shine').style.transform='translateX(200%)';"
+          onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.03)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.querySelector('.shine').style.transform='translateX(-200%)';"
+        >
+          <div
+            class="shine"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              transform: translateX(-200%);
+              transition: transform 0.6s;
+            "
+          ></div>
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              margin: 0 auto 16px;
+              background: rgba(67, 233, 123, 0.1);
+              border: 2px solid rgba(67, 233, 123, 0.3);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s;
+            "
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+              alt="Docker"
+              style="width: 36px; height: 36px; object-fit: contain"
+            />
+          </div>
+          <div
+            class="tech-name"
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            Docker
+          </div>
+          <div
+            style="
+              height: 2px;
+              width: 40px;
+              margin: 0 auto 10px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #43e97b,
+                transparent
+              );
+              border-radius: 2px;
+            "
+          ></div>
+          <div
+            class="tech-level"
+            style="
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba(67, 233, 123, 0.15);
+              border: 1px solid rgba(67, 233, 123, 0.4);
+              border-radius: 8px;
+              font-size: 0.7rem;
+              color: #43e97b;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+          >
+            Beginner
+          </div>
+        </div>
+
+        <div
+          class="tech-card"
+          style="
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 18px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          "
+          onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.background='rgba(67, 233, 123, 0.1)'; this.style.borderColor='rgba(67, 233, 123, 0.5)'; this.style.boxShadow='0 20px 60px rgba(67, 233, 123, 0.3), inset 0 1px 0 rgba(255,255,255,0.1)'; this.querySelector('.shine').style.transform='translateX(200%)';"
+          onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.background='rgba(255,255,255,0.03)'; this.style.borderColor='rgba(255,255,255,0.08)'; this.style.boxShadow='0 8px 32px rgba(0,0,0,0.1)'; this.querySelector('.shine').style.transform='translateX(-200%)';"
+        >
+          <div
+            class="shine"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              transform: translateX(-200%);
+              transition: transform 0.6s;
+            "
+          ></div>
+          <div
+            style="
+              width: 60px;
+              height: 60px;
+              margin: 0 auto 16px;
+              background: rgba(67, 233, 123, 0.1);
+              border: 2px solid rgba(67, 233, 123, 0.3);
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s;
+            "
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+              alt="AWS"
+              style="width: 36px; height: 36px; object-fit: contain"
+            />
+          </div>
+          <div
+            class="tech-name"
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            AWS
+          </div>
+          <div
+            style="
+              height: 2px;
+              width: 40px;
+              margin: 0 auto 10px;
+              background: linear-gradient(
+                90deg,
+                transparent,
+                #43e97b,
+                transparent
+              );
+              border-radius: 2px;
+            "
+          ></div>
+          <div
+            class="tech-level"
+            style="
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba(67, 233, 123, 0.15);
+              border: 1px solid rgba(67, 233, 123, 0.4);
+              border-radius: 8px;
+              font-size: 0.7rem;
+              color: #43e97b;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            "
+          >
+            Beginner
+          </div>
+        </div>
+      </div>
+
+      <style>
+        @keyframes float {
+          0%,
+          100% {
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            transform: translate(30px, -30px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+        }
+      </style>
     </section>
     <style>
       @keyframes scroll {
