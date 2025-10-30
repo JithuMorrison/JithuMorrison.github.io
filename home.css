@@ -1216,7 +1216,7 @@ ul a:hover {
   border: 0px solid red;
   padding: 3rem 2rem;
   border-radius: .5rem;
-  background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
+  background: linear-gradient(180deg, #f25a78 0%, #00e3ae 50%, #4a73fa 100%);
   text-align: center;
   outline: 0.1rem solid rgba(0, 0, 0.1);
   outline-offset: -1rem;
