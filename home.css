@@ -1619,6 +1619,10 @@ ul a:hover {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Shape */
     clip-path: polygon(
         0 20px, 20px 0,
         calc(50% - 40px) 0,
@@ -1631,11 +1635,8 @@ ul a:hover {
         calc(100% - 20px) 100%,
         20px 100%, 0 calc(100% - 20px)
     );
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    color: #fff;
 
-    /* 👉 Animated Gradient */
+    /* Main Gradient Background */
     background: linear-gradient(
         135deg,
         #ff9d33,
@@ -1649,48 +1650,58 @@ ul a:hover {
     animation: neonGradient 6s ease-in-out infinite;
 }
 
-/* Gradient Animation Keyframes */
-@keyframes neonGradient {
-    0%   { background-position: 0% 50%; }
-    33%  { background-position: 100% 50%; }
-    66%  { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Border Glow */
+/* ✨ Gradient Border shaped like polygon */
 .jithucontainer-curve::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    padding: 2px;
-    background: inherit;
+    padding: 5px; /* border thickness */
+
+    background: linear-gradient(
+        135deg,
+        #ff9d33,
+        #ff0058,
+        #5b5bff,
+        #00ffc8,
+        #00a92f
+    );
+
+    /* Mask to make inner part transparent */
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    clip-path: inherit;
-    z-index: -1;
+
+    clip-path: polygon(
+        0 20px, 20px 0,
+        calc(50% - 40px) 0,
+        calc(50% - 30px) 10px,
+        calc(50% + 30px) 10px,
+        calc(50% + 40px) 0,
+        calc(100% - 20px) 0,
+        100% 20px,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        20px 100%, 0 calc(100% - 20px)
+    );
+
+    z-index: 2;
+    pointer-events: none;
 }
 
-/* Top neon accent line */
-.jithucontainer-curve::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: rgba(255,255,255,0.6);
-    border-radius: 5px;
-    box-shadow: 0 0 8px rgba(255,255,255,0.7);
-}
-
-/* Hover boost */
+/* 🔥 Glow on Hover */
 .jithucontainer-curve:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+}
+
+/* 🎨 Gradient animation */
+@keyframes neonGradient {
+    0% { background-position: 0% 50%; }
+    33% { background-position: 100% 50%; }
+    66% { background-position: 50% 100%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Enhanced Layout */
