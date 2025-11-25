@@ -100,6 +100,7 @@
         margin-bottom: 10px;
         text-shadow: 0 0 40px rgba(0, 245, 255, 0.5);
         animation: glow 3s ease-in-out infinite;
+        font-family: "Montserrat", "Segoe UI", sans-serif;
       }
 
       @keyframes glow {
@@ -162,6 +163,7 @@
         animation: fadeInUp 0.8s ease-out;
         position: relative;
         overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 245, 255, 0.2);
       }
 
       .company-showcase::before {
@@ -212,6 +214,11 @@
         font-size: 3rem;
         font-weight: 800;
         box-shadow: 0 10px 40px rgba(0, 245, 255, 0.4);
+        transition: transform 0.3s ease;
+      }
+
+      .company-logo:hover {
+        transform: scale(1.05);
       }
 
       .company-info h2 {
@@ -668,6 +675,10 @@
         }
       }
     </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="animated-bg" id="particles"></div>
@@ -699,15 +710,15 @@
           </p>
           <div class="company-stats">
             <div class="stat-card">
-              <div class="stat-number">2+</div>
+              <div class="stat-number">5+</div>
               <div class="stat-label">Projects Delivered</div>
             </div>
             <div class="stat-card">
-              <div class="stat-number">2</div>
+              <div class="stat-number">3</div>
               <div class="stat-label">Clients Served</div>
             </div>
             <div class="stat-card">
-              <div class="stat-number">5+</div>
+              <div class="stat-number">15+</div>
               <div class="stat-label">Technologies</div>
             </div>
             <div class="stat-card">
@@ -752,12 +763,14 @@
               <div class="media-info">
                 <h4 class="media-title">Arduino Development</h4>
                 <p class="media-description">
-                  Development of IOT devices and automation systems
+                  Development of IOT devices and automation systems using
+                  Arduino Uno, Nano, and Mega boards
                 </p>
                 <div class="media-tags">
                   <span class="tag">Arduino</span>
                   <span class="tag">C++</span>
                   <span class="tag">IoT</span>
+                  <span class="tag">Sensors</span>
                 </div>
               </div>
             </div>
@@ -784,6 +797,7 @@
                   <span class="tag">Arduino</span>
                   <span class="tag">IR Sensor</span>
                   <span class="tag">C</span>
+                  <span class="tag">HCI</span>
                 </div>
               </div>
             </div>
@@ -803,12 +817,13 @@
                 <h4 class="media-title">ESP32 WiFi Systems</h4>
                 <p class="media-description">
                   Wireless sensors, remote monitoring, and cloud-connected
-                  devices
+                  devices using ESP32 and ESP8266 modules
                 </p>
                 <div class="media-tags">
                   <span class="tag">ESP32</span>
                   <span class="tag">WiFi</span>
                   <span class="tag">MQTT</span>
+                  <span class="tag">IoT</span>
                 </div>
               </div>
             </div>
@@ -835,6 +850,85 @@
                   <span class="tag">Sensors</span>
                   <span class="tag">Medical Devices</span>
                   <span class="tag">Health Tech</span>
+                  <span class="tag">Arduino</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-item"
+              data-title="Intel RealSense Camera"
+              data-desc="Worked with Intel RealSense depth cameras for 3D scanning, object recognition, and spatial mapping applications. Integrated with computer vision pipelines for advanced perception systems."
+            >
+              <div class="media-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600"
+                  alt="Intel RealSense"
+                />
+              </div>
+              <div class="media-info">
+                <h4 class="media-title">Intel RealSense Camera</h4>
+                <p class="media-description">
+                  3D scanning, depth perception, and spatial mapping using Intel
+                  RealSense depth cameras
+                </p>
+                <div class="media-tags">
+                  <span class="tag">Intel RealSense</span>
+                  <span class="tag">3D Scanning</span>
+                  <span class="tag">Depth Perception</span>
+                  <span class="tag">Computer Vision</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-item"
+              data-title="Leap Motion Sensor"
+              data-desc="Developed gesture recognition applications using Leap Motion sensor for hand tracking and gesture-based control systems. Created interactive experiences and VR/AR applications."
+            >
+              <div class="media-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600"
+                  alt="Leap Motion"
+                />
+              </div>
+              <div class="media-info">
+                <h4 class="media-title">Leap Motion Sensor</h4>
+                <p class="media-description">
+                  Hand tracking, gesture recognition, and interactive control
+                  systems using Leap Motion sensor
+                </p>
+                <div class="media-tags">
+                  <span class="tag">Leap Motion</span>
+                  <span class="tag">Gesture Recognition</span>
+                  <span class="tag">Hand Tracking</span>
+                  <span class="tag">VR/AR</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-item"
+              data-title="Microsoft Kinect"
+              data-desc="Utilized Microsoft Kinect for motion sensing, skeletal tracking, and interactive applications. Developed games, fitness apps, and interactive installations using Kinect SDK."
+            >
+              <div class="media-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600"
+                  alt="Microsoft Kinect"
+                />
+              </div>
+              <div class="media-info">
+                <h4 class="media-title">Microsoft Kinect</h4>
+                <p class="media-description">
+                  Motion sensing, skeletal tracking, and interactive
+                  applications using Microsoft Kinect
+                </p>
+                <div class="media-tags">
+                  <span class="tag">Kinect</span>
+                  <span class="tag">Motion Sensing</span>
+                  <span class="tag">Skeletal Tracking</span>
+                  <span class="tag">Interactive Apps</span>
                 </div>
               </div>
             </div>
@@ -869,11 +963,13 @@
                 <h4 class="media-title">AI</h4>
                 <p class="media-description">
                   Neural networks, image classification, and predictive models
+                  using TensorFlow, Keras, and PyTorch
                 </p>
                 <div class="media-tags">
                   <span class="tag">TensorFlow</span>
                   <span class="tag">Keras</span>
                   <span class="tag">Python</span>
+                  <span class="tag">Neural Networks</span>
                 </div>
               </div>
             </div>
@@ -881,7 +977,7 @@
             <div
               class="media-item"
               data-title="Machine Learning"
-              data-desc="Worked on Supervised, Unsupervised learning, Neural networks, image classification, and deep learning models for various applications."
+              data-desc="Worked on Supervised (SVM, Random Forest, Decision Trees), Unsupervised learning (K-means, PCA), Neural networks, image classification, and deep learning models for various applications."
             >
               <div class="media-thumbnail">
                 <img
@@ -892,13 +988,15 @@
               <div class="media-info">
                 <h4 class="media-title">ML</h4>
                 <p class="media-description">
-                  Worked on Supervised, Unsupervised, Neural networks, image
-                  classification, and deep learning models
+                  Worked on Supervised (SVM, Random Forest), Unsupervised,
+                  Neural networks, image classification, and deep learning
+                  models
                 </p>
                 <div class="media-tags">
                   <span class="tag">Scikit-learn</span>
                   <span class="tag">Pandas</span>
                   <span class="tag">Python</span>
+                  <span class="tag">SVM</span>
                 </div>
               </div>
             </div>
@@ -906,7 +1004,7 @@
             <div
               class="media-item"
               data-title="Reinforcement Learning"
-              data-desc="Developed Reinforcement learning models for game playing and decision making systems using various algorithms and frameworks."
+              data-desc="Developed Reinforcement learning models for game playing and decision making systems using PPO (Proximal Policy Optimization) and other algorithms."
             >
               <div class="media-thumbnail">
                 <img
@@ -918,12 +1016,39 @@
                 <h4 class="media-title">RL</h4>
                 <p class="media-description">
                   Have worked on Reinforcement learning models for game playing
-                  and decision making systems
+                  and decision making systems using PPO and other algorithms
                 </p>
                 <div class="media-tags">
                   <span class="tag">PyTorch</span>
                   <span class="tag">OpenAI Gym</span>
                   <span class="tag">Python</span>
+                  <span class="tag">PPO</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-item"
+              data-title="Transformers & NLP"
+              data-desc="Implemented transformer models including MT5 (Multilingual T5) for text generation, translation, and summarization tasks. Fine-tuned BERT models for various NLP applications."
+            >
+              <div class="media-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600"
+                  alt="Transformers"
+                />
+              </div>
+              <div class="media-info">
+                <h4 class="media-title">Transformers & NLP</h4>
+                <p class="media-description">
+                  Transformer models including MT5, BERT for text generation,
+                  translation, and NLP tasks
+                </p>
+                <div class="media-tags">
+                  <span class="tag">Transformers</span>
+                  <span class="tag">MT5</span>
+                  <span class="tag">BERT</span>
+                  <span class="tag">NLP</span>
                 </div>
               </div>
             </div>
@@ -943,35 +1068,13 @@
                 <h4 class="media-title">Computer Vision Systems</h4>
                 <p class="media-description">
                   Object detection, face recognition, and real-time tracking
+                  using YOLO, OpenCV, and CNN architectures
                 </p>
                 <div class="media-tags">
                   <span class="tag">OpenCV</span>
                   <span class="tag">YOLO</span>
                   <span class="tag">CNN</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="media-item"
-              data-title="NLP Applications"
-              data-desc="Built chatbots, sentiment analysis tools, and text generation models. Implemented transformer models for language understanding and created automated content moderation systems."
-            >
-              <div class="media-thumbnail">
-                <img
-                  src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600"
-                  alt="NLP"
-                />
-              </div>
-              <div class="media-info">
-                <h4 class="media-title">Natural Language Processing</h4>
-                <p class="media-description">
-                  Chatbots, sentiment analysis, and text generation models
-                </p>
-                <div class="media-tags">
-                  <span class="tag">NLP</span>
-                  <span class="tag">Transformers</span>
-                  <span class="tag">BERT</span>
+                  <span class="tag">Object Detection</span>
                 </div>
               </div>
             </div>
@@ -986,7 +1089,7 @@
               <h3>Full-Stack Web Development</h3>
               <p>
                 Modern web applications, APIs, and platforms built with
-                cutting-edge frameworks
+                cutting-edge frameworks and databases
               </p>
             </div>
           </div>
@@ -1005,12 +1108,14 @@
               <div class="media-info">
                 <h4 class="media-title">HTML, CSS & JS</h4>
                 <p class="media-description">
-                  Responsive websites and interactive web applications
+                  Responsive websites and interactive web applications using
+                  core web technologies
                 </p>
                 <div class="media-tags">
                   <span class="tag">HTML5</span>
                   <span class="tag">CSS3</span>
                   <span class="tag">JavaScript</span>
+                  <span class="tag">Responsive Design</span>
                 </div>
               </div>
             </div>
@@ -1029,12 +1134,14 @@
               <div class="media-info">
                 <h4 class="media-title">Frontend Frameworks</h4>
                 <p class="media-description">
-                  SPAs, dashboards, and interactive web applications
+                  SPAs, dashboards, and interactive web applications using
+                  React, Vue.js, and Angular
                 </p>
                 <div class="media-tags">
                   <span class="tag">React</span>
                   <span class="tag">Vue.js</span>
                   <span class="tag">Angular</span>
+                  <span class="tag">TypeScript</span>
                 </div>
               </div>
             </div>
@@ -1053,12 +1160,14 @@
               <div class="media-info">
                 <h4 class="media-title">React.js</h4>
                 <p class="media-description">
-                  SPAs, dashboards, and interactive web applications
+                  SPAs, dashboards, and interactive web applications with React
+                  and Redux
                 </p>
                 <div class="media-tags">
                   <span class="tag">React</span>
                   <span class="tag">Redux</span>
                   <span class="tag">TypeScript</span>
+                  <span class="tag">Hooks</span>
                 </div>
               </div>
             </div>
@@ -1066,7 +1175,7 @@
             <div
               class="media-item"
               data-title="Backend Development"
-              data-desc="Developed RESTful APIs and server-side applications using various backend technologies. Implemented authentication systems, database management, and scalable architectures."
+              data-desc="Developed RESTful APIs and server-side applications using various backend technologies. Implemented authentication systems, database management with MongoDB, Firebase, MySQL, and Supabase, and scalable architectures."
             >
               <div class="media-thumbnail">
                 <img
@@ -1077,12 +1186,14 @@
               <div class="media-info">
                 <h4 class="media-title">Backend</h4>
                 <p class="media-description">
-                  RESTful APIs, server-side logic, and database management
+                  RESTful APIs, server-side logic, and database management with
+                  MongoDB, Firebase, MySQL, and Supabase
                 </p>
                 <div class="media-tags">
                   <span class="tag">Node.js</span>
                   <span class="tag">Python</span>
-                  <span class="tag">Databases</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">Firebase</span>
                 </div>
               </div>
             </div>
@@ -1090,7 +1201,7 @@
             <div
               class="media-item"
               data-title="Node.js Backend"
-              data-desc="Developed RESTful APIs and microservices using Node.js and Express. Implemented authentication systems, real-time features with WebSockets, and scalable backend architectures."
+              data-desc="Developed RESTful APIs and microservices using Node.js and Express. Implemented authentication systems, real-time features with WebSockets, and scalable backend architectures with MongoDB and MySQL."
             >
               <div class="media-thumbnail">
                 <img
@@ -1101,12 +1212,14 @@
               <div class="media-info">
                 <h4 class="media-title">Node.js</h4>
                 <p class="media-description">
-                  RESTful APIs, microservices, and real-time applications
+                  RESTful APIs, microservices, and real-time applications with
+                  Node.js, Express, and MongoDB
                 </p>
                 <div class="media-tags">
                   <span class="tag">Node.js</span>
                   <span class="tag">Express</span>
                   <span class="tag">MongoDB</span>
+                  <span class="tag">MySQL</span>
                 </div>
               </div>
             </div>
@@ -1114,7 +1227,7 @@
             <div
               class="media-item"
               data-title="Flask Applications"
-              data-desc="Built web applications and APIs using Flask framework. Created lightweight and efficient backend systems with various extensions and integrations."
+              data-desc="Built web applications and APIs using Flask framework. Created lightweight and efficient backend systems with various extensions and integrations with databases."
             >
               <div class="media-thumbnail">
                 <img
@@ -1125,12 +1238,14 @@
               <div class="media-info">
                 <h4 class="media-title">Flask</h4>
                 <p class="media-description">
-                  Lightweight web applications and API backends
+                  Lightweight web applications and API backends with Flask and
+                  database integrations
                 </p>
                 <div class="media-tags">
                   <span class="tag">Flask</span>
                   <span class="tag">Python</span>
                   <span class="tag">REST API</span>
+                  <span class="tag">SQLAlchemy</span>
                 </div>
               </div>
             </div>
@@ -1138,7 +1253,7 @@
             <div
               class="media-item"
               data-title="Python Web Frameworks"
-              data-desc="Built full-stack web applications with Django and Flask frameworks. Created CMS systems, data analytics dashboards, and API backends with PostgreSQL and MySQL databases."
+              data-desc="Built full-stack web applications with Django and Flask frameworks. Created CMS systems, data analytics dashboards, and API backends with PostgreSQL, MySQL, and Supabase databases."
             >
               <div class="media-thumbnail">
                 <img
@@ -1149,12 +1264,14 @@
               <div class="media-info">
                 <h4 class="media-title">Python Web Frameworks</h4>
                 <p class="media-description">
-                  Django CMS, Flask APIs, and data-driven applications
+                  Django CMS, Flask APIs, and data-driven applications with
+                  PostgreSQL, MySQL, and Supabase
                 </p>
                 <div class="media-tags">
                   <span class="tag">Django</span>
                   <span class="tag">Flask</span>
                   <span class="tag">PostgreSQL</span>
+                  <span class="tag">Supabase</span>
                 </div>
               </div>
             </div>
@@ -1173,12 +1290,14 @@
               <div class="media-info">
                 <h4 class="media-title">Streamlit</h4>
                 <p class="media-description">
-                  Interactive data applications and machine learning demos
+                  Interactive data applications and machine learning demos with
+                  Streamlit
                 </p>
                 <div class="media-tags">
                   <span class="tag">Streamlit</span>
                   <span class="tag">Python</span>
                   <span class="tag">Data Visualization</span>
+                  <span class="tag">Dashboards</span>
                 </div>
               </div>
             </div>
@@ -1212,12 +1331,14 @@
               <div class="media-info">
                 <h4 class="media-title">Flutter Development</h4>
                 <p class="media-description">
-                  Beautiful, fast mobile apps with single codebase
+                  Beautiful, fast mobile apps with single codebase using Flutter
+                  and Dart
                 </p>
                 <div class="media-tags">
                   <span class="tag">Flutter</span>
                   <span class="tag">Dart</span>
                   <span class="tag">Firebase</span>
+                  <span class="tag">Cross-platform</span>
                 </div>
               </div>
             </div>
@@ -1237,11 +1358,13 @@
                 <h4 class="media-title">Android Studio</h4>
                 <p class="media-description">
                   Native Android apps with custom UI and hardware integration
+                  using Android Studio
                 </p>
                 <div class="media-tags">
                   <span class="tag">Java</span>
                   <span class="tag">Android</span>
                   <span class="tag">XML</span>
+                  <span class="tag">Native Development</span>
                 </div>
               </div>
             </div>
@@ -1260,12 +1383,14 @@
               <div class="media-info">
                 <h4 class="media-title">Java App Development</h4>
                 <p class="media-description">
-                  Native Android applications with Java programming
+                  Native Android applications with Java programming and Android
+                  SDK
                 </p>
                 <div class="media-tags">
                   <span class="tag">Java</span>
                   <span class="tag">Android Studio</span>
                   <span class="tag">Firebase</span>
+                  <span class="tag">Android SDK</span>
                 </div>
               </div>
             </div>
@@ -1290,6 +1415,7 @@
                   <span class="tag">Kotlin</span>
                   <span class="tag">Android Studio</span>
                   <span class="tag">Jetpack</span>
+                  <span class="tag">Coroutines</span>
                 </div>
               </div>
             </div>
@@ -1323,12 +1449,39 @@
               <div class="media-info">
                 <h4 class="media-title">AWS Cloud Infrastructure</h4>
                 <p class="media-description">
-                  Scalable deployments with serverless architecture
+                  Scalable deployments with serverless architecture on AWS
                 </p>
                 <div class="media-tags">
                   <span class="tag">AWS</span>
                   <span class="tag">Lambda</span>
                   <span class="tag">S3</span>
+                  <span class="tag">EC2</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-item"
+              data-title="Google Cloud Platform"
+              data-desc="Utilized GCP services including Google Cloud Functions, BigQuery, and Cloud Storage for data processing and application deployment. Implemented machine learning pipelines with Vertex AI."
+            >
+              <div class="media-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600"
+                  alt="GCP"
+                />
+              </div>
+              <div class="media-info">
+                <h4 class="media-title">Google Cloud Platform</h4>
+                <p class="media-description">
+                  Cloud computing, data processing, and ML pipelines on Google
+                  Cloud Platform
+                </p>
+                <div class="media-tags">
+                  <span class="tag">GCP</span>
+                  <span class="tag">BigQuery</span>
+                  <span class="tag">Cloud Functions</span>
+                  <span class="tag">Vertex AI</span>
                 </div>
               </div>
             </div>
@@ -1347,12 +1500,13 @@
               <div class="media-info">
                 <h4 class="media-title">Container Orchestration</h4>
                 <p class="media-description">
-                  Docker containers with Kubernetes deployment
+                  Docker containers with Kubernetes deployment and orchestration
                 </p>
                 <div class="media-tags">
                   <span class="tag">Docker</span>
                   <span class="tag">Kubernetes</span>
                   <span class="tag">CI/CD</span>
+                  <span class="tag">Microservices</span>
                 </div>
               </div>
             </div>
@@ -1371,12 +1525,14 @@
               <div class="media-info">
                 <h4 class="media-title">Automated Deployment</h4>
                 <p class="media-description">
-                  CI/CD pipelines for continuous delivery
+                  CI/CD pipelines for continuous delivery with GitHub Actions
+                  and Jenkins
                 </p>
                 <div class="media-tags">
                   <span class="tag">GitHub Actions</span>
                   <span class="tag">Jenkins</span>
                   <span class="tag">Automation</span>
+                  <span class="tag">DevOps</span>
                 </div>
               </div>
             </div>
@@ -1410,12 +1566,13 @@
               <div class="media-info">
                 <h4 class="media-title">Smart Contract Development</h4>
                 <p class="media-description">
-                  Ethereum DApps, DeFi, and NFT platforms
+                  Ethereum DApps, DeFi, and NFT platforms with Solidity
                 </p>
                 <div class="media-tags">
                   <span class="tag">Solidity</span>
                   <span class="tag">Ethereum</span>
                   <span class="tag">Web3.js</span>
+                  <span class="tag">Smart Contracts</span>
                 </div>
               </div>
             </div>
@@ -1434,12 +1591,39 @@
               <div class="media-info">
                 <h4 class="media-title">Decentralized Applications</h4>
                 <p class="media-description">
-                  Web3 apps with blockchain integration
+                  Web3 apps with blockchain integration and IPFS storage
                 </p>
                 <div class="media-tags">
                   <span class="tag">Web3</span>
                   <span class="tag">IPFS</span>
                   <span class="tag">MetaMask</span>
+                  <span class="tag">DApps</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-item"
+              data-title="Ryx Cryptocurrency"
+              data-desc="Developed Ryx, my own cryptocurrency with custom blockchain implementation. Created wallet applications, mining software, and exchange integrations for the Ryx ecosystem."
+            >
+              <div class="media-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1621570366214-bc7d47be34eb?w=600"
+                  alt="Ryx Cryptocurrency"
+                />
+              </div>
+              <div class="media-info">
+                <h4 class="media-title">Ryx Cryptocurrency</h4>
+                <p class="media-description">
+                  Custom cryptocurrency with blockchain, wallet, and mining
+                  implementation
+                </p>
+                <div class="media-tags">
+                  <span class="tag">Ryx</span>
+                  <span class="tag">Cryptocurrency</span>
+                  <span class="tag">Blockchain</span>
+                  <span class="tag">Wallet</span>
                 </div>
               </div>
             </div>
@@ -1473,12 +1657,14 @@
               <div class="media-info">
                 <h4 class="media-title">Data Analysis & Processing</h4>
                 <p class="media-description">
-                  Statistical analysis and predictive modeling
+                  Statistical analysis and predictive modeling with Python,
+                  Pandas, and NumPy
                 </p>
                 <div class="media-tags">
                   <span class="tag">Python</span>
                   <span class="tag">Pandas</span>
                   <span class="tag">NumPy</span>
+                  <span class="tag">Statistics</span>
                 </div>
               </div>
             </div>
@@ -1498,12 +1684,14 @@
               <div class="media-info">
                 <h4 class="media-title">Data Visualization</h4>
                 <p class="media-description">
-                  Interactive dashboards and business intelligence
+                  Interactive dashboards and business intelligence with Tableau
+                  and Power BI
                 </p>
                 <div class="media-tags">
                   <span class="tag">Tableau</span>
                   <span class="tag">Power BI</span>
                   <span class="tag">D3.js</span>
+                  <span class="tag">Plotly</span>
                 </div>
               </div>
             </div>
@@ -1522,12 +1710,14 @@
               <div class="media-info">
                 <h4 class="media-title">Big Data Technologies</h4>
                 <p class="media-description">
-                  Distributed computing and stream processing
+                  Distributed computing and stream processing with Spark and
+                  Hadoop
                 </p>
                 <div class="media-tags">
                   <span class="tag">Spark</span>
                   <span class="tag">Hadoop</span>
                   <span class="tag">ETL</span>
+                  <span class="tag">Big Data</span>
                 </div>
               </div>
             </div>
@@ -1561,12 +1751,13 @@
               <div class="media-info">
                 <h4 class="media-title">UI/UX Design in Figma</h4>
                 <p class="media-description">
-                  Prototypes, design systems, and user interfaces
+                  Prototypes, design systems, and user interfaces with Figma
                 </p>
                 <div class="media-tags">
                   <span class="tag">Figma</span>
                   <span class="tag">Prototyping</span>
                   <span class="tag">UI/UX</span>
+                  <span class="tag">Design Systems</span>
                 </div>
               </div>
             </div>
@@ -1585,19 +1776,47 @@
               <div class="media-info">
                 <h4 class="media-title">Adobe Creative Suite</h4>
                 <p class="media-description">
-                  Graphics, illustrations, and motion design
+                  Graphics, illustrations, and motion design with Adobe Creative
+                  Suite
                 </p>
                 <div class="media-tags">
                   <span class="tag">Photoshop</span>
                   <span class="tag">Illustrator</span>
                   <span class="tag">After Effects</span>
+                  <span class="tag">Graphic Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="media-item"
+              data-title="Canva & DaVinci Resolve"
+              data-desc="Created professional designs and video content using Canva for graphic design and DaVinci Resolve for video editing and color grading. Produced marketing materials, social media content, and video presentations."
+            >
+              <div class="media-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1574717024453-9f5c6e68d1e9?w=600"
+                  alt="Canva & DaVinci Resolve"
+                />
+              </div>
+              <div class="media-info">
+                <h4 class="media-title">Canva & DaVinci Resolve</h4>
+                <p class="media-description">
+                  Graphic design with Canva and professional video editing with
+                  DaVinci Resolve
+                </p>
+                <div class="media-tags">
+                  <span class="tag">Canva</span>
+                  <span class="tag">DaVinci Resolve</span>
+                  <span class="tag">Video Editing</span>
+                  <span class="tag">Graphic Design</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Domains & Specializations -->
+        <!-- Domain Expertise -->
         <div class="tech-category">
           <div class="category-header">
             <div class="category-icon">🎯</div>
