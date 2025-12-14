@@ -1,0 +1,440 @@
+{
+  "header": {
+    "title": "Know More on Me",
+    "subtitle": "INNOVATE • CREATE • INSPIRE"
+  },
+  "company": {
+    "logo": "Z",
+    "name": "ZARTYX",
+    "tagline": "Pioneering Tomorrow's Technology",
+    "description": "Zartyx is a cutting-edge technology company dedicated to building innovative solutions that transform industries. We specialize in AI/ML development, full-stack applications, IoT systems, and blockchain technology. Our mission is to harness emerging technologies to create products that make a real-world impact, empowering businesses and individuals to reach their full potential through intelligent automation and seamless digital experiences.",
+    "stats": [
+      { "number": "5+", "label": "Projects Delivered" },
+      { "number": "3", "label": "Clients Served" },
+      { "number": "15+", "label": "Technologies" },
+      { "number": "100%", "label": "Innovation" }
+    ]
+  },
+  "technologyArsenal": {
+    "title": "Technology Arsenal",
+    "subtitle": "Hardware, Software, Tools & Domains I've Mastered",
+    "categories": [
+      {
+        "id": "hardware",
+        "icon": "⚡",
+        "title": "Hardware & Electronics",
+        "description": "Physical computing, embedded systems, robotics, and IoT devices I've built and programmed",
+        "items": [
+          {
+            "title": "Arduino Development",
+            "description": "Development of IOT devices and automation systems using Arduino Uno, Nano, and Mega boards",
+            "detailedDesc": "Built multiple IoT devices using Arduino Uno, Nano, and Mega boards. Created smart home automation systems, weather stations, and robotic arms with servo motors and sensors.",
+            "image": "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=600",
+            "tags": ["Arduino", "C++", "IoT", "Sensors"]
+          },
+          {
+            "title": "Virtual Keyboard",
+            "description": "Wanna type in air? Try this virtual keyboard built using IR sensors to capture finger movements and project them as keystrokes. In future can be integrated with Hologram",
+            "detailedDesc": "Built a virtual keyboard using IR sensors to capture finger movements and project them as keystrokes. Can be integrated with holograms in the future.",
+            "image": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600",
+            "tags": ["Arduino", "IR Sensor", "C", "HCI"]
+          },
+          {
+            "title": "ESP32 WiFi Systems",
+            "description": "Wireless sensors, remote monitoring, and cloud-connected devices using ESP32 and ESP8266 modules",
+            "detailedDesc": "Created wireless sensor networks and remote monitoring systems using ESP32 and ESP8266. Built real-time data logging systems with cloud connectivity and mobile app integration.",
+            "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
+            "tags": ["ESP32", "WiFi", "MQTT", "IoT"]
+          },
+          {
+            "title": "Pulse Oximeter",
+            "description": "Created a low-cost pulse oximeter for reading patient heart rate and oxygen saturation levels to assist in health monitoring.",
+            "detailedDesc": "Created a low-cost pulse oximeter for reading patient heart rate and oxygen saturation levels to assist in health monitoring.",
+            "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600",
+            "tags": ["Sensors", "Medical Devices", "Health Tech", "Arduino"]
+          },
+          {
+            "title": "Intel RealSense Camera",
+            "description": "3D scanning, depth perception, and spatial mapping using Intel RealSense depth cameras",
+            "detailedDesc": "Worked with Intel RealSense depth cameras for 3D scanning, object recognition, and spatial mapping applications. Integrated with computer vision pipelines for advanced perception systems.",
+            "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600",
+            "tags": ["Intel RealSense", "3D Scanning", "Depth Perception", "Computer Vision"]
+          },
+          {
+            "title": "Leap Motion Sensor",
+            "description": "Hand tracking, gesture recognition, and interactive control systems using Leap Motion sensor",
+            "detailedDesc": "Developed gesture recognition applications using Leap Motion sensor for hand tracking and gesture-based control systems. Created interactive experiences and VR/AR applications.",
+            "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600",
+            "tags": ["Leap Motion", "Gesture Recognition", "Hand Tracking", "VR/AR"]
+          },
+          {
+            "title": "Microsoft Kinect",
+            "description": "Motion sensing, skeletal tracking, and interactive applications using Microsoft Kinect",
+            "detailedDesc": "Utilized Microsoft Kinect for motion sensing, skeletal tracking, and interactive applications. Developed games, fitness apps, and interactive installations using Kinect SDK.",
+            "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600",
+            "tags": ["Kinect", "Motion Sensing", "Skeletal Tracking", "Interactive Apps"]
+          }
+        ]
+      },
+      {
+        "id": "ai-ml",
+        "icon": "🤖",
+        "title": "AI & Machine Learning",
+        "description": "Deep learning models, computer vision, NLP, and AI-powered applications I've developed",
+        "items": [
+          {
+            "title": "AI",
+            "description": "Neural networks, image classification, and predictive models using TensorFlow, Keras, and PyTorch",
+            "detailedDesc": "Built neural networks for image classification, object detection, and time series prediction. Trained custom models for real-world applications including medical image analysis and predictive maintenance.",
+            "image": "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=600",
+            "tags": ["TensorFlow", "Keras", "Python", "Neural Networks"]
+          },
+          {
+            "title": "ML",
+            "description": "Worked on Supervised (SVM, Random Forest), Unsupervised, Neural networks, image classification, and deep learning models",
+            "detailedDesc": "Worked on Supervised (SVM, Random Forest, Decision Trees), Unsupervised learning (K-means, PCA), Neural networks, image classification, and deep learning models for various applications.",
+            "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600",
+            "tags": ["Scikit-learn", "Pandas", "Python", "SVM"]
+          },
+          {
+            "title": "RL",
+            "description": "Have worked on Reinforcement learning models for game playing and decision making systems using PPO and other algorithms",
+            "detailedDesc": "Developed Reinforcement learning models for game playing and decision making systems using PPO (Proximal Policy Optimization) and other algorithms.",
+            "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600",
+            "tags": ["PyTorch", "OpenAI Gym", "Python", "PPO"]
+          },
+          {
+            "title": "Transformers & NLP",
+            "description": "Transformer models including MT5, BERT for text generation, translation, and NLP tasks",
+            "detailedDesc": "Implemented transformer models including MT5 (Multilingual T5) for text generation, translation, and summarization tasks. Fine-tuned BERT models for various NLP applications.",
+            "image": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600",
+            "tags": ["Transformers", "MT5", "BERT", "NLP"]
+          },
+          {
+            "title": "Computer Vision Systems",
+            "description": "Object detection, face recognition, and real-time tracking using YOLO, OpenCV, and CNN architectures",
+            "detailedDesc": "Developed real-time object detection systems using YOLO and OpenCV. Created face recognition attendance systems, gesture control interfaces, and automated quality inspection systems.",
+            "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600",
+            "tags": ["OpenCV", "YOLO", "CNN", "Object Detection"]
+          }
+        ]
+      },
+      {
+        "id": "web-dev",
+        "icon": "🌐",
+        "title": "Full-Stack Web Development",
+        "description": "Modern web applications, APIs, and platforms built with cutting-edge frameworks and databases",
+        "items": [
+          {
+            "title": "HTML, CSS & JS",
+            "description": "Responsive websites and interactive web applications using core web technologies",
+            "detailedDesc": "Built responsive websites and web applications using core web technologies. Created interactive user interfaces, animations, and dynamic content with vanilla JavaScript.",
+            "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600",
+            "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design"]
+          },
+          {
+            "title": "Frontend Frameworks",
+            "description": "SPAs, dashboards, and interactive web applications using React, Vue.js, and Angular",
+            "detailedDesc": "Created responsive single-page applications with React.js, Vue.js, and Angular. Built e-commerce platforms, dashboards, and social networking features.",
+            "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600",
+            "tags": ["React", "Vue.js", "Angular", "TypeScript"]
+          },
+          {
+            "title": "React.js",
+            "description": "SPAs, dashboards, and interactive web applications with React and Redux",
+            "detailedDesc": "Created responsive single-page applications with React.js, Redux for state management, and modern UI libraries. Built e-commerce platforms, dashboards, and social networking features.",
+            "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600",
+            "tags": ["React", "Redux", "TypeScript", "Hooks"]
+          },
+          {
+            "title": "Backend",
+            "description": "RESTful APIs, server-side logic, and database management with MongoDB, Firebase, MySQL, and Supabase",
+            "detailedDesc": "Developed RESTful APIs and server-side applications using various backend technologies. Implemented authentication systems, database management with MongoDB, Firebase, MySQL, and Supabase, and scalable architectures.",
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600",
+            "tags": ["Node.js", "Python", "MongoDB", "Firebase"]
+          },
+          {
+            "title": "Node.js",
+            "description": "RESTful APIs, microservices, and real-time applications with Node.js, Express, and MongoDB",
+            "detailedDesc": "Developed RESTful APIs and microservices using Node.js and Express. Implemented authentication systems, real-time features with WebSockets, and scalable backend architectures with MongoDB and MySQL.",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600",
+            "tags": ["Node.js", "Express", "MongoDB", "MySQL"]
+          },
+          {
+            "title": "Flask",
+            "description": "Lightweight web applications and API backends with Flask and database integrations",
+            "detailedDesc": "Built web applications and APIs using Flask framework. Created lightweight and efficient backend systems with various extensions and integrations with databases.",
+            "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600",
+            "tags": ["Flask", "Python", "REST API", "SQLAlchemy"]
+          },
+          {
+            "title": "Python Web Frameworks",
+            "description": "Django CMS, Flask APIs, and data-driven applications with PostgreSQL, MySQL, and Supabase",
+            "detailedDesc": "Built full-stack web applications with Django and Flask frameworks. Created CMS systems, data analytics dashboards, and API backends with PostgreSQL, MySQL, and Supabase databases.",
+            "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600",
+            "tags": ["Django", "Flask", "PostgreSQL", "Supabase"]
+          },
+          {
+            "title": "Streamlit",
+            "description": "Interactive data applications and machine learning demos with Streamlit",
+            "detailedDesc": "Created interactive data applications and dashboards using Streamlit. Built machine learning demos, data visualization tools, and rapid prototyping applications.",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600",
+            "tags": ["Streamlit", "Python", "Data Visualization", "Dashboards"]
+          }
+        ]
+      },
+      {
+        "id": "mobile-dev",
+        "icon": "📱",
+        "title": "Mobile App Development",
+        "description": "Cross-platform and native mobile applications for iOS and Android",
+        "items": [
+          {
+            "title": "Flutter Development",
+            "description": "Beautiful, fast mobile apps with single codebase using Flutter and Dart",
+            "detailedDesc": "Created beautiful mobile apps using Flutter with Material Design and Cupertino widgets. Built real-time chat applications, e-commerce apps, and location-based services.",
+            "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600",
+            "tags": ["Flutter", "Dart", "Firebase", "Cross-platform"]
+          },
+          {
+            "title": "Android Studio",
+            "description": "Native Android apps with custom UI and hardware integration using Android Studio",
+            "detailedDesc": "Developed native Android applications using Android Studio. Built various mobile apps with Java, implementing custom UI components and integrating with device hardware.",
+            "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600",
+            "tags": ["Java", "Android", "XML", "Native Development"]
+          },
+          {
+            "title": "Java App Development",
+            "description": "Native Android applications with Java programming and Android SDK",
+            "detailedDesc": "Created native Android applications using Java. Implemented various mobile app functionalities, user interfaces, and backend integrations for Android devices.",
+            "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600",
+            "tags": ["Java", "Android Studio", "Firebase", "Android SDK"]
+          },
+          {
+            "title": "Kotlin App Development",
+            "description": "Modern Android apps with Kotlin and Jetpack components",
+            "detailedDesc": "Developed modern Android applications using Kotlin. Built efficient and concise mobile apps with Kotlin's modern language features and Android Jetpack components.",
+            "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600",
+            "tags": ["Kotlin", "Android Studio", "Jetpack", "Coroutines"]
+          }
+        ]
+      },
+      {
+        "id": "cloud-devops",
+        "icon": "☁️",
+        "title": "Cloud Computing & DevOps",
+        "description": "Cloud infrastructure, containerization, CI/CD pipelines, and deployment automation",
+        "items": [
+          {
+            "title": "AWS Cloud Infrastructure",
+            "description": "Scalable deployments with serverless architecture on AWS",
+            "detailedDesc": "Deployed scalable applications on AWS using EC2, S3, Lambda, and RDS. Implemented auto-scaling, load balancing, and serverless architectures for cost-effective solutions.",
+            "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600",
+            "tags": ["AWS", "Lambda", "S3", "EC2"]
+          },
+          {
+            "title": "Google Cloud Platform",
+            "description": "Cloud computing, data processing, and ML pipelines on Google Cloud Platform",
+            "detailedDesc": "Utilized GCP services including Google Cloud Functions, BigQuery, and Cloud Storage for data processing and application deployment. Implemented machine learning pipelines with Vertex AI.",
+            "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600",
+            "tags": ["GCP", "BigQuery", "Cloud Functions", "Vertex AI"]
+          },
+          {
+            "title": "Container Orchestration",
+            "description": "Docker containers with Kubernetes deployment and orchestration",
+            "detailedDesc": "Containerized applications using Docker and orchestrated with Kubernetes. Set up microservices architecture with automated deployment, scaling, and monitoring systems.",
+            "image": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600",
+            "tags": ["Docker", "Kubernetes", "CI/CD", "Microservices"]
+          },
+          {
+            "title": "Automated Deployment",
+            "description": "CI/CD pipelines for continuous delivery with GitHub Actions and Jenkins",
+            "detailedDesc": "Automated build, test, and deployment workflows using GitHub Actions, Jenkins, and GitLab CI. Implemented continuous integration for faster development cycles and reliable releases.",
+            "image": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600",
+            "tags": ["GitHub Actions", "Jenkins", "Automation", "DevOps"]
+          }
+        ]
+      },
+      {
+        "id": "blockchain",
+        "icon": "⛓️",
+        "title": "Blockchain & Web3",
+        "description": "Decentralized applications, smart contracts, and blockchain solutions",
+        "items": [
+          {
+            "title": "Smart Contract Development",
+            "description": "Ethereum DApps, DeFi, and NFT platforms with Solidity",
+            "detailedDesc": "Developed and deployed smart contracts on Ethereum using Solidity. Created DeFi protocols, NFT marketplaces, and token systems with comprehensive security audits.",
+            "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600",
+            "tags": ["Solidity", "Ethereum", "Web3.js", "Smart Contracts"]
+          },
+          {
+            "title": "Decentralized Applications",
+            "description": "Web3 apps with blockchain integration and IPFS storage",
+            "detailedDesc": "Built decentralized applications with Web3 integration. Created wallets, decentralized exchanges, and governance platforms with MetaMask integration and IPFS storage.",
+            "image": "https://images.unsplash.com/photo-1622630998477-20aa696ecb05?w=600",
+            "tags": ["Web3", "IPFS", "MetaMask", "DApps"]
+          },
+          {
+            "title": "Ryx Cryptocurrency",
+            "description": "Custom cryptocurrency with blockchain, wallet, and mining implementation",
+            "detailedDesc": "Developed Ryx, my own cryptocurrency with custom blockchain implementation. Created wallet applications, mining software, and exchange integrations for the Ryx ecosystem.",
+            "image": "https://images.unsplash.com/photo-1621570366214-bc7d47be34eb?w=600",
+            "tags": ["Ryx", "Cryptocurrency", "Blockchain", "Wallet"]
+          }
+        ]
+      },
+      {
+        "id": "data-science",
+        "icon": "📊",
+        "title": "Data Science & Analytics",
+        "description": "Data analysis, visualization, statistical modeling, and business intelligence",
+        "items": [
+          {
+            "title": "Data Analysis & Processing",
+            "description": "Statistical analysis and predictive modeling with Python, Pandas, and NumPy",
+            "detailedDesc": "Performed extensive data analysis using Python, Pandas, and NumPy. Created insights from large datasets, statistical modeling, and predictive analytics for business decisions.",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600",
+            "tags": ["Python", "Pandas", "NumPy", "Statistics"]
+          },
+          {
+            "title": "Data Visualization",
+            "description": "Interactive dashboards and business intelligence with Tableau and Power BI",
+            "detailedDesc": "Created interactive dashboards and visualizations using Tableau, Power BI, and Plotly. Built real-time monitoring systems and executive dashboards for data-driven decision making.",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
+            "tags": ["Tableau", "Power BI", "D3.js", "Plotly"]
+          },
+          {
+            "title": "Big Data Technologies",
+            "description": "Distributed computing and stream processing with Spark and Hadoop",
+            "detailedDesc": "Worked with large-scale data processing using Apache Spark and Hadoop. Implemented ETL pipelines and real-time stream processing for high-volume data applications.",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600",
+            "tags": ["Spark", "Hadoop", "ETL", "Big Data"]
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "icon": "🎨",
+        "title": "Design & UI/UX",
+        "description": "User interface design, prototyping, and creating stunning visual experiences",
+        "items": [
+          {
+            "title": "UI/UX Design in Figma",
+            "description": "Prototypes, design systems, and user interfaces with Figma",
+            "detailedDesc": "Designed complete user interfaces and interactive prototypes in Figma. Created design systems, component libraries, and collaborated with development teams for pixel-perfect implementations.",
+            "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600",
+            "tags": ["Figma", "Prototyping", "UI/UX", "Design Systems"]
+          },
+          {
+            "title": "Adobe Creative Suite",
+            "description": "Graphics, illustrations, and motion design with Adobe Creative Suite",
+            "detailedDesc": "Created graphics, illustrations, and marketing materials using Photoshop, Illustrator, and After Effects. Produced video content and motion graphics for brand campaigns.",
+            "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600",
+            "tags": ["Photoshop", "Illustrator", "After Effects", "Graphic Design"]
+          },
+          {
+            "title": "Canva & DaVinci Resolve",
+            "description": "Graphic design with Canva and professional video editing with DaVinci Resolve",
+            "detailedDesc": "Created professional designs and video content using Canva for graphic design and DaVinci Resolve for video editing and color grading. Produced marketing materials, social media content, and video presentations.",
+            "image": "https://images.unsplash.com/photo-1574717024453-9f5c6e68d1e9?w=600",
+            "tags": ["Canva", "DaVinci Resolve", "Video Editing", "Graphic Design"]
+          }
+        ]
+      },
+      {
+        "id": "domain-expertise",
+        "icon": "🎯",
+        "title": "Domain Expertise",
+        "description": "Specialized knowledge and experience across various technology domains",
+        "items": [
+          {
+            "title": "Cybersecurity",
+            "description": "Security testing and encryption implementations",
+            "detailedDesc": "Implemented security best practices, penetration testing, and vulnerability assessments. Developed secure authentication systems and encryption protocols for sensitive data protection.",
+            "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600",
+            "tags": ["Security", "Encryption", "Penetration Testing"]
+          },
+          {
+            "title": "Game Development",
+            "description": "2D/3D games with Unity and Unreal Engine",
+            "detailedDesc": "Created 2D and 3D games using Unity and Unreal Engine. Developed gameplay mechanics, physics systems, and multiplayer networking for engaging gaming experiences.",
+            "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600",
+            "tags": ["Unity", "C#", "3D Modeling"],
+            "hasVideo": true
+          },
+          {
+            "title": "AR/VR Experiences",
+            "description": "Immersive reality applications and simulations",
+            "detailedDesc": "Built augmented and virtual reality experiences using Unity XR and ARCore. Created immersive training simulations, virtual showrooms, and AR filters for mobile applications.",
+            "image": "https://images.unsplash.com/photo-1617802690658-1173a812650d?w=600",
+            "tags": ["Unity XR", "ARCore", "VR"]
+          }
+        ]
+      }
+    ]
+  },
+  "achievements": {
+    "title": "Achievements & Milestones",
+    "subtitle": "Recognition, awards, and memorable moments from my journey",
+    "filters": [
+      { "id": "all", "label": "All" },
+      { "id": "hackathon", "label": "Hackathons" },
+      { "id": "events", "label": "Events" },
+      { "id": "clubs", "label": "Clubs" },
+      { "id": "volunteering", "label": "Volunteering" },
+      { "id": "fun", "label": "Fun" }
+    ],
+    "items": [
+      {
+        "category": "hackathon",
+        "title": "Smart India Hackathon 2023",
+        "description": "Built an AI-powered solution that won first place among 50+ teams. Developed innovative features with cutting-edge technology.",
+        "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600",
+        "tags": ["AI/ML", "1st Place", "Team Lead"]
+      },
+      {
+        "category": "events",
+        "title": "AR/VR Workshops Organized & Volunteered",
+        "description": "Organized a X3D workshop, AR/VR workshop, lovable workshop and Volunteered at various tech events like Invente (Hackers Asylum and AR event).",
+        "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600",
+        "tags": ["Leadership", "500+ Attendees", "Coordination"]
+      },
+      {
+        "category": "clubs",
+        "title": "Coding Club Treasurer",
+        "description": "Treasurer in SSN Coding club.",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600",
+        "tags": ["Leadership", "Mentoring", "Community"]
+      },
+      {
+        "category": "volunteering",
+        "title": "ICCIDS Volunteering",
+        "description": "Taught programming to underprivileged students, impacting 100+ lives through free coding workshops.",
+        "image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600",
+        "tags": ["Social Impact", "Teaching", "100+ Students"]
+      },
+      {
+        "category": "fun",
+        "title": "Solved Rubicks Cube",
+        "description": "Successfully completed solving a rubics cube!",
+        "image": "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=600",
+        "tags": ["Endurance", "Team Spirit", "Epic"]
+      },
+      {
+        "category": "fun",
+        "title": "Learnt all countries in world",
+        "description": "Successfully Learned all countries in the world!",
+        "image": "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=600",
+        "tags": ["Endurance", "Team Spirit", "Epic"]
+      },
+      {
+        "category": "hackathon",
+        "title": "Global Blockchain Hackathon",
+        "description": "Created a decentralized app for supply chain transparency. Secured 2nd place internationally.",
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600",
+        "tags": ["Blockchain", "2nd Place", "Global"]
+      }
+    ]
+  }
+}
